@@ -21,7 +21,6 @@ services:
   - Asesoría e implementación tecnológica para proyectos artísticos.
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
-<<<<<<< HEAD
 
 references:
   - profile_img: '/images/profiles/alejandro-aristizabal/profile.jpg'
@@ -43,13 +42,9 @@ references:
     - Diseñador
     - Animador
 
-=======
-  - Implementacion de Web Apps
->>>>>>> d757b77f091cdeeafc3bfe5fccafb20f24afcb77
 trayectory:
   - Desarrollo de página web estática.
   - Asesoría e implementación tecnológica para proyectos artísticos.
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
 ---
-
