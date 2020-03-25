@@ -87,6 +87,11 @@ defaults:
             accepts_mime_types:
               - 'image/png'
               - 'image/jpg'
+      _comments:
+        featured:
+          content_id: "Only necessary if displaying a video. Should be the id obtained from the url of the video"
+          image: "Only necessary if displaying an image."
+          hosting: "Specifies the type of content to display"
   - scope:
       path: "index.html"
       type: "pages"

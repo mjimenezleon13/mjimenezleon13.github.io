@@ -13,9 +13,11 @@ description: >-
   themselves in innovative ways. My latest project allows people to interact
   with music through dance and movement using Deep Learning models.
 featured:
-  - path: VZNAirgLWe0
+  - content_id: VZNAirgLWe0
+    image:
     hosting: youtube
-  - path: /images/suira-landing-illustration.svg
+  - content_id:
+    image: /images/suira-landing-illustration.svg
     hosting: image
 services:
   - Desarrollo de página web estática.

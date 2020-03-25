@@ -47,10 +47,10 @@ layout: default
 						{% endif %}
 						<div class="col-md-6">
 							{% if media.hosting != 'image' %}
-								{% include embed.html hosting=media.hosting id=media.path %}
+								{% include embed.html hosting=media.hosting id=media.content_id %}
 							{% else %}
 								<div class="featured-image">
-									<img src="{{ site.baseurl }}{{media.path}}">
+									<img src="{{ site.baseurl }}{{media.image}}">
 								</div>
 							{% endif %}
 							{% if mod_idx == 1 %}
