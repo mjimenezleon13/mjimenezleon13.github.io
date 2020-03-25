@@ -1,6 +1,6 @@
 ---
 name: Alejandro Aristizábal
-profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
+profile_image: /images/profiles/alejandro-aristizabal/profile.jpg
 specialties:
   - Ingeniero de sonido
   - programador
@@ -22,30 +22,31 @@ services:
   - Asesoría e implementación tecnológica para proyectos artísticos.
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
-
 references:
-  - profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
+  - profile_image: /uploads/sotaquirá-para-stefano.jpg
     name: Alejandro Pereira
     link:
     specialties:
-    - Diseñador
-    - Animador
+      - Diseñador
+      - Animador
     rating: 4.6
-    description: |
-      Esta persona se parece mucho a mi. No entiendo por que pero parece que tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
-  - profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
+    description: >-
+      Esta persona se parece mucho a mi. No entiendo por que pero parece que
+      tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
+  - profile_image: /images/profiles/alejandro-aristizabal/profile.jpg
     name: Alejandro Pereira
     link:
     specialties:
-    - Diseñador
-    - Animador
+      - Diseñador
+      - Animador
     rating: 3.8
-    description: |
-      Esta persona se parece mucho a mi. No entiendo por que pero parece que tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
-
+    description: >-
+      Esta persona se parece mucho a mi. No entiendo por que pero parece que
+      tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
 trayectory:
   - Desarrollo de página web estática.
   - Asesoría e implementación tecnológica para proyectos artísticos.
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
 ---
+
