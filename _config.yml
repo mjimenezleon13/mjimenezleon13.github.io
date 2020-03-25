@@ -83,7 +83,7 @@ defaults:
               - 'image/png'
               - 'image/jpg'
         featured:
-          hosting:
+          hostings:
             - youtube
             - vimeo
             - image
