@@ -66,21 +66,22 @@ defaults:
       layout: "profile"
       _options:
         profile_img:
-          width: 2000
-          height: 2000
-  - scope:
-      path: ""
-      type: "staff_members"
-    values:
-      _options:
-        image_path:
-          width: 600
-          height: 600
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
+          width: 300
+          height: 300
+          resize_style: "cover"
+          uploads_dir: "/images/profiles/:title"
+          accepts_mime_types:
+            - 'image/png'
+            - 'image/jpg'
+        references:
+          profile_img:
+            width: 300
+            height: 300
+            resize_style: "cover"
+            uploads_dir: "/images/profiles/:title"
+            accepts_mime_types:
+              - 'image/png'
+              - 'image/jpg'
   - scope:
       path: "index.html"
       type: "pages"
