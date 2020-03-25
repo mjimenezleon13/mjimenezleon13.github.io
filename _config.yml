@@ -65,7 +65,7 @@ defaults:
     values:
       layout: "profile"
       _options:
-        image_path:
+        profile_img:
           width: 2000
           height: 2000
   - scope:
