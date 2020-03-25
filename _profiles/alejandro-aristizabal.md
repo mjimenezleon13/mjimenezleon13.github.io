@@ -23,7 +23,7 @@ services:
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
 references:
-  - profile_image: /uploads/sotaquirá-para-stefano.jpg
+  - profile_image: /images/profiles/alejandro-aristizabal/screenshot-1.png
     name: Alejandro Pereira
     link:
     specialties:
