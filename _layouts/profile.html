@@ -6,9 +6,6 @@ layout: default
 {% assign username = username[1] | split: "." %}
 {% assign username = username[0] %}
 
-{% assign profile_img = "/images/profiles/" | append: username | append: "/profile.jpg" %}
-{% assign specialties_list = page.specialties | split: "," %}
-
 <section class="hero">
 	<div class="container">
 		{% if portfolio.heading %}
