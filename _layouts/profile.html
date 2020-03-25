@@ -1,19 +1,9 @@
 ---
 layout: default
 ---
-{% assign portfolio = site.pages | where: "path", "portfolio.html" | first %}
-{% assign username = page.path | split: "/" %}
-{% assign username = username[1] | split: "." %}
-{% assign username = username[0] %}
-
 <section class="hero">
 	<div class="container">
-		{% if portfolio.heading %}
 		<h3 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}/profiles/">&larr;Back to profiles</a></h3>
-		{% endif %}
-		{% if page.subtitle %}
-			<p class="subtext">{{ page.subtitle }}</p>
-		{% endif %}
 	</div>
 </section>
 
@@ -23,7 +13,7 @@ layout: default
 			<div class="row">
 				<div class="col-md-3" style="text-align: center;">
 					<div class="circular-image offset">
-						<img src="{% include relative-src.html src=profile_image %}">
+						<img src="{% include relative-src.html src=page.profile_image %}">
 					</div>
 				</div>
 				<div class="col-md-7" style="text-align: left;">

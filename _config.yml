@@ -65,7 +65,7 @@ defaults:
     values:
       layout: "profile"
       _options:
-        profile_img:
+        profile_image:
           width: 300
           height: 300
           resize_style: "cover"
@@ -74,7 +74,7 @@ defaults:
             - 'image/png'
             - 'image/jpg'
         references:
-          profile_img:
+          profile_image:
             width: 300
             height: 300
             resize_style: "cover"
