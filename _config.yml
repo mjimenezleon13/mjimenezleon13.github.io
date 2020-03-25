@@ -82,6 +82,11 @@ defaults:
             accepts_mime_types:
               - 'image/png'
               - 'image/jpg'
+        featured:
+          hosting:
+            - youtube
+            - vimeo
+            - image
   - scope:
       path: "index.html"
       type: "pages"

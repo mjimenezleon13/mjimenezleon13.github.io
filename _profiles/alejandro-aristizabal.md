@@ -1,6 +1,6 @@
 ---
 name: Alejandro Aristizábal
-profile_img: '/images/profiles/alejandro-aristizabal/profile.jpg'
+profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
 specialties:
   - Ingeniero de sonido
   - programador
@@ -24,7 +24,7 @@ services:
   - Desarrollo de síntesis de sonidos.
 
 references:
-  - profile_img: '/images/profiles/alejandro-aristizabal/profile.jpg'
+  - profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
     name: Alejandro Pereira
     link:
     specialties:
@@ -33,7 +33,7 @@ references:
     rating: 4.6
     description: |
       Esta persona se parece mucho a mi. No entiendo por que pero parece que tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
-  - profile_img: '/images/profiles/alejandro-aristizabal/profile.jpg'
+  - profile_image: '/images/profiles/alejandro-aristizabal/profile.jpg'
     name: Alejandro Pereira
     link:
     specialties:
