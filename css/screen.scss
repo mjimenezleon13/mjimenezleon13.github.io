@@ -9,6 +9,7 @@ $brand-color-light: lighten($brand-color, 40%);
 $brand-color-dark: darken($brand-color, 10%);
 $html-background-color: #dadada;
 $secondary-brand-color: #36b292;
+$secondary-brand-color-light: lighten($secondary-brand-color, 10%);
 $middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
 
 // Breakpoints

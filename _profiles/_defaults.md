@@ -1,6 +1,6 @@
 ---
-name:
+name: Lorem ipsum
 subtitle:
 external_url:
-image_path:
+profile_path:
 ---

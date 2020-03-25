@@ -25,7 +25,7 @@ timezone: Etc/UTC
 collections:
   staff_members:
     output: false
-  clients:
+  profiles:
     output: true
 
 paginate: 10
@@ -61,9 +61,9 @@ defaults:
           height: 2000
   - scope:
       path: ""
-      type: "clients"
+      type: "profiles"
     values:
-      layout: "client"
+      layout: "profile"
       _options:
         image_path:
           width: 2000

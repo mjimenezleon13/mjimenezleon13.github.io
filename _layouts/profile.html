@@ -1,0 +1,115 @@
+---
+layout: default
+---
+{% assign portfolio = site.pages | where: "path", "portfolio.html" | first %}
+{% assign username = page.path | split: "/" %}
+{% assign username = username[1] | split: "." %}
+{% assign username = username[0] %}
+
+{% assign profile_img = "/images/profiles/" | append: username | append: "/profile.jpg" %}
+{% assign specialties_list = page.specialties | split: "," %}
+
+<section class="hero">
+	<div class="container">
+		{% if portfolio.heading %}
+		<h3 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}/profiles/">&larr;Back to profiles</a></h3>
+		{% endif %}
+		{% if page.subtitle %}
+			<p class="subtext">{{ page.subtitle }}</p>
+		{% endif %}
+	</div>
+</section>
+
+<section class="diagonal-top">
+	<div class="container">
+		<div class="floating-container bootstrap-wrapper">
+			<div class="row">
+				<div class="col-md-3" style="text-align: center;">
+					<div class="circular-image offset">
+						<img src="{% include relative-src.html src=profile_img %}">
+					</div>
+				</div>
+				<div class="col-md-7" style="text-align: left;">
+					<h3 style="font-weight: 300; margin: 20px 0 0 0;">{{page.name}}</h3>
+					<ul class="specialties-list">
+						{% for specialty in page.specialties %}
+							<li>{{specialty | strip}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="col-md-2" style="text-align: center;">
+					<p><a class="button secondary" href="{{ site.baseurl }}/contact/">Contactar</a></p>
+				</div>
+			</div>
+			<div>
+
+			<!-- PROFILE DESCRIPTION -->
+			<div class="prof-description container">
+				<p>{{page.description | newline_to_br }}</p>
+			</div>
+			<!-- /PROFILE DESCRIPTION -->
+
+			<!-- FEATURED ITEMS -->
+			{% if page.featured %}
+				<div class="bootstrap-wrapper container horizontal-divider">
+					<h2 id="featured">Featured</h2>
+					{% for media in page.featured %}
+						{% assign mod_idx = forloop.index | minus: 1 | modulo: 2%}
+						{% if mod_idx == 0 %}
+							<div class="row" style="margin-bottom: 15px;">
+						{% endif %}
+						<div class="col-md-6">
+							{% if media.hosting != 'image' %}
+								{% include embed.html hosting=media.hosting id=media.path %}
+							{% else %}
+								<div class="featured-image">
+									<img src="{{ site.baseurl }}{{media.path}}">
+								</div>
+							{% endif %}
+							{% if mod_idx == 1 %}
+								</div>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+			<!-- /FEATURED ITEMS -->
+
+			<!-- SERVICES -->
+			{% if page.services %}
+				<div class="container horizontal-divider" id="services">
+					<h2>Services</h2>
+					<ul>
+						{% for service in page.services %}
+							<li>{{service | strip}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+			<!-- /SERVICES -->
+
+			<!-- REFERENCES -->
+			<!-- /REFERENCES -->
+
+			<!-- TRAYECTORY -->
+			{% if page.trayectory %}
+				<div class="container horizontal-divider" id="services">
+					<h2>Trayectory</h2>
+					<ul>
+						{% for trayectory in page.trayectory %}
+							<li>{{trayectory | strip}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+			<!-- /TRAYECTORY -->
+
+			<!-- PROJECTS -->
+			<div class="container horizontal-divider" id="projects">
+				<h2>Projects</h2>
+			</div>
+			<!-- /PROJECTS -->
+			</div>
+		</div>
+	</div>
+</section>

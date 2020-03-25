@@ -1,5 +1,6 @@
 footer {
 	@extend section;
+	min-height:9vw;
 	padding: 30px 0;
 	position: relative;
 	background: $html-background-color;
