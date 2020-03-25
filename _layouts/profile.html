@@ -89,6 +89,51 @@ layout: default
 			<!-- /SERVICES -->
 
 			<!-- REFERENCES -->
+			{% if page.references %}
+				<div class="container horizontal-divider" id="references">
+					<h2>References</h2>
+					{% for reference in page.references %}
+					<div class="ref-item bootstrap-wrapper container">
+						<div class="row ref-header">
+							<div class="col-md-2 ref-profile">
+								<div class="circular-image small centered break-sm">
+									<img src="{% include relative-src.html src=reference.profile_img %}">
+								</div>
+							</div>
+							<div class="col-md-10">
+								<div class="row">
+									<h3 style="font-weight: 300; margin: 0;">{{reference.name}}</h3>
+									<ul class="specialties-list ref" style="font-size: 0.8rem;margin:auto 0 0 0;">
+										{% for specialty in reference.specialties %}
+										<li>{{specialty | strip}}</li>
+										{% endfor %}
+									</ul>
+								</div>
+								<div class="row" style="position: relative; display: inline-block;">
+									<ul class="star-rating unchecked">
+										<li><i class="far fa-star"></i></li>
+										<li><i class="far fa-star"></i></li>
+										<li><i class="far fa-star"></i></li>
+										<li><i class="far fa-star"></i></li>
+										<li><i class="far fa-star"></i></li>
+									</ul>
+									<ul class="star-rating checked" style="width: calc({{reference.rating}}/5.0*100%)">
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+									</ul>
+								</div>
+								<div class="row">
+									<p>{{reference.description | newline_to_br}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			{% endif %}
 			<!-- /REFERENCES -->
 
 			<!-- TRAYECTORY -->
