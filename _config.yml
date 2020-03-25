@@ -22,6 +22,11 @@ social:
 
 timezone: Etc/UTC
 
+hostings:
+  - youtube
+  - vimeo
+  - image
+
 collections:
   staff_members:
     output: false
@@ -82,11 +87,6 @@ defaults:
             accepts_mime_types:
               - 'image/png'
               - 'image/jpg'
-        featured:
-          hostings:
-            - youtube
-            - vimeo
-            - image
   - scope:
       path: "index.html"
       type: "pages"
