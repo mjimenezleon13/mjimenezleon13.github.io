@@ -29,7 +29,7 @@ references:
     specialties:
       - Diseñador
       - Animador
-    rating: 4.6
+    rating_number: 4.6
     description: >-
       Esta persona se parece mucho a mi. No entiendo por que pero parece que
       tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
@@ -39,7 +39,7 @@ references:
     specialties:
       - Diseñador
       - Animador
-    rating: 3.8
+    rating_number: 3.8
     description: >-
       Esta persona se parece mucho a mi. No entiendo por que pero parece que
       tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
@@ -49,4 +49,3 @@ trayectory:
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
 ---
-

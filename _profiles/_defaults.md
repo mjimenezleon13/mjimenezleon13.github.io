@@ -24,7 +24,7 @@ references:
     - Especialidad 1
     - Especialidad 2
     - Especialidad 3
-    rating: 5
+    rating_number: 5
     description: |
       Aquí va la descripción de la referencia
   - profile_img: '/images/profiles/default-user.png'
@@ -34,7 +34,7 @@ references:
     - Especialidad 1
     - Especialidad 2
     - Especialidad 3
-    rating: 5
+    rating_number: 5
     description: |
       Aquí va la descripción de la referencia
 trayectory:
