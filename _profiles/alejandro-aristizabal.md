@@ -36,12 +36,12 @@ references:
       Esta persona se parece mucho a mi. No entiendo por que pero parece que
       tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
   - profile_image: /images/profiles/alejandro-aristizabal/profile.jpg
-    name: Alejandro Pereira
+    name: Mateo Jimenez
     link:
     specialties:
       - Diseñador
       - Animador
-    rating_number: 3.8
+    rating_number: 1
     description: >-
       Esta persona se parece mucho a mi. No entiendo por que pero parece que
       tiene el mismo estilo y hasta se tomo la foto en el mismo lugar.
@@ -51,3 +51,4 @@ trayectory:
   - Implementación de modelos de Machine Learning.
   - Desarrollo de síntesis de sonidos.
 ---
+
