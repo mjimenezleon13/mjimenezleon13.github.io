@@ -3,7 +3,7 @@
 {% case media.hosting %}
   {% when 'image' %}
 		<div class="featured-image">
-			<img src="{{ site.baseurl }}{{media.image}}">
+			<img src="{{media.image}}">
 		</div>
   {% when 'audio' %}
     <audio class="js-player" src="{{media.audio_path}}"></audio>
