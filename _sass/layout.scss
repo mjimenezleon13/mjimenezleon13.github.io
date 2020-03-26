@@ -435,13 +435,40 @@ ul.star-rating {
 
 .mediaWrapper {
 	height: 100%;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	&.light {
+		.plyr__controls {
+			color: #EEE;
+		}
+	}
+
+	&.dark {
+		.plyr__controls {
+			color: #444;
+		}
+	}
 	.plyr__controls {
 		position: absolute;
 		bottom: 0;
 		background: transparent;
+		width: 100%;
+	}
+
+	.desc-overlay {
+		position:absolute;
+		z-index: 1;
+		padding-left: 10px;
+		&.light {
+			color: #EEE;
+		}
+		&.dark {
+			color: #444;
+		}
+		h5 {
+			margin: 0;
+		}
 	}
 }
 

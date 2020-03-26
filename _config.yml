@@ -28,6 +28,10 @@ hostings:
   - image
   - audio
 
+controls_theme:
+  - light
+  - dark
+
 collections:
   staff_members:
     output: false

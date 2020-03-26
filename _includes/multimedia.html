@@ -1,5 +1,9 @@
 {% assign media = include.media %}
-<div class="mediaWrapper" style="background-image: url('{{media.image}}')">
+<div class="mediaWrapper {{media.controls_theme}}" style="background-image: url('{{media.image}}')">
+<div class="desc-overlay {{media.controls_theme}}">
+  <h5>{{media.title}}</h5>
+  <h5>{{media.subtitle}}</h5>
+</div>
 {% case media.hosting %}
   {% when 'image' %}
 		<div class="featured-image">
