@@ -79,6 +79,11 @@ defaults:
           accepts_mime_types:
             - 'image/png'
             - 'image/jpg'
+        featured:
+          audio_path:
+            accepts_mime_types:
+              - 'audio/mpeg'
+              - 'audio/ogg'
         references:
           profile_image:
             width: 300
