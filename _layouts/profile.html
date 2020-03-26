@@ -46,13 +46,7 @@ layout: default
 							<div class="row" style="margin-bottom: 15px;">
 						{% endif %}
 						<div class="col-md-6">
-							{% if media.hosting != 'image' %}
-								{% include embed.html hosting=media.hosting id=media.content_id %}
-							{% else %}
-								<div class="featured-image">
-									<img src="{{ site.baseurl }}{{media.image}}">
-								</div>
-							{% endif %}
+							{% include multimedia.html media=media %}
 							{% if mod_idx == 1 %}
 								</div>
 							{% endif %}
@@ -157,3 +151,7 @@ layout: default
 		</div>
 	</div>
 </section>
+<script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
+<script>
+const players = Plyr.setup('.js-player');
+</script>

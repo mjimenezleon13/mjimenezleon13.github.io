@@ -1,0 +1,13 @@
+{% assign media = include.media %}
+<div class="mediaWrapper" style="background-image: url('{{media.image}}')">
+{% case media.hosting %}
+  {% when 'image' %}
+		<div class="featured-image">
+			<img src="{{ site.baseurl }}{{media.image}}">
+		</div>
+  {% when 'audio' %}
+    <audio class="js-player" src="{{url}}"></audio>
+  {% else %}
+    <div class='js-player' data-plyr-provider="{{media.hosting}}" data-plyr-embed-id="{{media.content_id}}"></div>
+{% endcase %}
+</div>
