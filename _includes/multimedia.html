@@ -6,7 +6,7 @@
 			<img src="{{ site.baseurl }}{{media.image}}">
 		</div>
   {% when 'audio' %}
-    <audio class="js-player" src="{{url}}"></audio>
+    <audio class="js-player" src="{{media.audio_path}}"></audio>
   {% else %}
     <div class='js-player' data-plyr-provider="{{media.hosting}}" data-plyr-embed-id="{{media.content_id}}"></div>
 {% endcase %}
