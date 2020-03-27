@@ -16,7 +16,7 @@ layout: default
 						<img src="{% include relative-src.html src=page.profile_image %}">
 					</div>
 				</div>
-				<div class="col-md-7" style="text-align: left;">
+				<div class="col-md-6 center-md-left">
 					<h3 style="font-weight: 300; margin: 20px 0 0 0;">{{page.name}}</h3>
 					<ul class="specialties-list">
 						{% for specialty in page.specialties %}
@@ -24,7 +24,7 @@ layout: default
 						{% endfor %}
 					</ul>
 				</div>
-				<div class="col-md-2" style="text-align: center;">
+				<div class="col-md-3" style="text-align: center;">
 					<p><a class="button secondary" href="{{ site.baseurl }}/contact/">Contactar</a></p>
 				</div>
 			</div>
@@ -45,7 +45,7 @@ layout: default
 						{% if mod_idx == 0 %}
 							<div class="row" style="margin-bottom: 15px;">
 						{% endif %}
-						<div class="col-md-6">
+						<div class="col-md-6 retain-aspect">
 							{% include multimedia.html media=media %}
 							{% if mod_idx == 1 %}
 								</div>
