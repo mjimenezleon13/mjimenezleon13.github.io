@@ -1,0 +1,13 @@
+{% assign media = include.media %}
+<div class="mediaWrapper {{media.controls_theme}}" style="background-image: url('{{media.image}}'); background-size: contain;">
+<div class="desc-overlay {{media.controls_theme}}">
+  <h5>{{media.title}}</h5>
+  <h5>{{media.subtitle}}</h5>
+</div>
+{% case media.hosting %}
+  {% when 'audio' %}
+    <audio class="js-player-carousel" src="{{media.audio_path}}"></audio>
+  {% else %}
+    <div class='js-player-carousel' data-plyr-provider="{{media.hosting}}" data-plyr-embed-id="{{media.content_id}}"></div>
+{% endcase %}
+</div>

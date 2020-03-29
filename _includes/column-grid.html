@@ -1,0 +1,96 @@
+{% if false %}
+====================================
+COLUMN GRID
+====================================
+Column grid is a grid of items that are arranged in columns. Their height is
+undefined, which allows for a cascade structure. Each item is clickable, and
+displays a modal with the content of the item.
+
+- Arguments:
+- lg-columns: number of colums to use in large displays
+- sm-columns: number of columns to use in small displays
+- xs-columns: number of columns to use in extra-small displays
+- identifier: a string that identifies this specific column grid content
+- items: an object containing the information to be displayed
+{
+  bg_color: HEX RGB color code for the hover container
+  title: The title of the item
+  image: Image to be displayed in the container
+  content: Markdown content to be displayed on modal
+}
+{% endif %}
+
+{% assign lg-columns = include.lg-columns | minus: 1 %}
+{% assign lg-col-size = 12 | divided_by: include.lg-columns %}
+{% assign sm-columns = include.sm-columns | minus: 1 %}
+{% assign sm-col-size = 12 | divided_by: include.sm-columns %}
+{% assign xs-columns = include.xs-columns | minus: 1 %}
+{% assign xs-col-size = 12 | divided_by: include.xs-columns %}
+{% assign items = include.items %}
+{% assign identifier = include.identifier %}
+<!-- DISPLAY COLLAGE ON LARGE SCREENS -->
+{% for i in (0..lg-columns) %}
+<div class="col-md-{{lg-col-size}} hidden-sm-down column-grid-item">
+  {% for item in items %}
+  {% assign item-column = forloop.index | minus: 1 | modulo: include.lg-columns %}
+  {% if item-column == i %}
+  <a href="#{{ identifier }}Modal{{ forloop.index }}" class="column-grid-link" data-toggle="modal">
+    <div class="column-grid-hover" style="background-color: {{item.bg_color}}">
+      <div class="column-grid-hover-content">
+        <h6>{{item.title}}</h6>
+        <hr/>
+        <p>Ver imágenes <i class="fa fa-chevron-right"></i></p>
+      </div>
+    </div>
+    <img src="{{ item.image | prepend: site.baseurl }}" class="img-responsive img-centered" alt="">
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endfor %}
+<!-- /DISPLAY COLLAGE ON LARGE SCREENS -->
+
+<!-- DISPLAY COLLAGE ON SMALL SCREENS -->
+{% for i in (0..sm-columns) %}
+<div class="col-sm-{{sm-col-size}} hidden-xs-down hidden-md-up column-grid-item">
+  {% for item in items %}
+  {% assign item-column = forloop.index | minus: 1 | modulo: include.sm-columns %}
+  {% if item-column == i %}
+  <a href="#{{ identifier }}Modal{{ forloop.index }}" class="column-grid-link" data-toggle="modal">
+    <div class="column-grid-hover" style="background-color: {{item.bg_color}}">
+      <div class="column-grid-hover-content">
+        <h6>{{item.title}}</h6>
+        <hr/>
+        <p>Ver imágenes <i class="fa fa-chevron-right"></i></p>
+      </div>
+    </div>
+    <img src="{{ item.image | prepend: site.baseurl }}" class="img-responsive img-centered" alt="">
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endfor %}
+<!-- /DISPLAY COLLAGE ON SMALL SCREENS -->
+
+<!-- DISPLAY COLLAGE ON EXTRASMALL SCREES -->
+{% for i in (0..xs-columns) %}
+<div class="col-xs-{{xs-col-size}} hidden-sm-up column-grid-item">
+  {% for item in items %}
+  {% assign item-column = forloop.index | minus: 1 | modulo: include.xs-columns %}
+  {% if item-column == i %}
+  <a href="#{{ identifier }}Modal{{ forloop.index }}" class="column-grid-link" data-toggle="modal">
+    <div class="column-grid-hover" style="background-color: {{item.bg_color}}">
+      <div class="column-grid-hover-content">
+        <h6>{{item.title}}</h6>
+        <hr/>
+        <p>Ver imágenes <i class="fa fa-chevron-right"></i></p>
+      </div>
+    </div>
+    <img src="{{ item.image | prepend: site.baseurl }}" class="img-responsive img-centered" alt="">
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endfor %}
+<!-- /DISPLAY COLLAGE ON EXTRASMALL SCREENS -->
+{% include column-grid-modals.html identifier=identifier items=items %}

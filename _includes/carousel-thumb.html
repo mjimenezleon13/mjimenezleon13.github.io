@@ -1,0 +1,10 @@
+{% assign media = include.media %}
+{% case media.hosting %}
+  {% when 'vimeo' %}
+    <div class='js-player' data-plyr-provider="{{media.hosting}}" data-plyr-embed-id="{{media.content_id}}"></div>
+  {% when 'youtube' %}
+    <div class='js-player' data-plyr-provider="{{media.hosting}}" data-plyr-embed-id="{{media.content_id}}"></div>
+  {% else %}
+    <img src="{{media.image}}">
+{% endcase %}
+<div class="thumb-overlay"></div>

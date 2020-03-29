@@ -145,6 +145,9 @@ layout: default
 			<!-- PROJECTS -->
 			<div class="container horizontal-divider" id="projects">
 				<h2>Projects</h2>
+				<div class="row" style="margin: 0;">
+					{% include column-grid.html  identifier="projects" lg-columns=3 sm-columns=2 xs-columns=1 items=page.projects %}
+				</div>
 			</div>
 			<!-- /PROJECTS -->
 			</div>
@@ -154,4 +157,33 @@ layout: default
 <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
 <script>
 const players = Plyr.setup('.js-player');
+</script>
+<script>
+$(document).ready(() => {
+	$('.js-player-carousel').each(function() {
+		const carousel = $(this).closest('.carousel');
+		const player = new Plyr($(this));
+		player.on('play', () => {
+			$(carousel).carousel('pause');
+		});
+		player.on('pause', () => {
+			$(carousel).carousel('cycle');
+		});
+	});
+})
+// for (const player in carousel_players) {
+// 	const gallery = $(player).closest('.carousel');
+//
+// 	console.log($(player).html());
+// 		$(player).on('play', (e) => {
+// 			console.log($());
+// 			console.log("PLAYING");
+// 			// $(gallery).carousel('pause');
+// 		});
+// 		$(player).on('pause', (e) => {
+// 			console.log($(player));
+// 			console.log("STOPPED");
+// 			// $(gallery).carousel('cycle');
+// 		});
+// 	}
 </script>
