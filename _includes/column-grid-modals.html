@@ -6,31 +6,37 @@
 {% assign galleryid = identifier | prepend: "gallery-" | append: forloop.index %}
 <div class="column-grid-modal modal fade" id="{{ identifier }}Modal{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
+    <section class="modal-header">
+      <div class="row justify-content-center">
+        <div class="col-sm-2 order-sm-1">
+        </div>
+        <div class="col-sm-2 order-sm-12">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 order-sm-3">
+          <h2>{{ item.title }}</h2>
         </div>
       </div>
-    </div>
-    <div class="container xl">
-      <div class="row">
-          <div class="modal-body" style="width:100%">
-            <h2>{{ item.title }}</h2>
-            <hr class="star-primary">
-            <section class="column-grid-content diagonal-top">
-              <div class="row">
-                <div class="col-lg-8">
-                  {% include carousel.html gallery=item.gallery galleryid=galleryid %}
-                </div>
-                <div class="col-lg-4">
-                  {{ item.description | markdownify}}
-                </div>
-              </div>
-            </section>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+    </section>
+    <section class="modal-body diagonal-top">
+      <div class="container">
+        <hr class="star-primary">
+        <div class="row">
+          <div class="col-lg-8">
+            {% include carousel.html gallery=item.gallery galleryid=galleryid %}
           </div>
+          <div class="col-lg-4">
+            {{ item.description | newline_to_br | markdownify}}
+            <button type="button" data-dismiss="modal">&larr;Back to profile</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 {% endfor %}

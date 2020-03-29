@@ -3,7 +3,6 @@ article.column-grid-content {
 }
 
 .column-grid-modal .modal-content {
-  padding: 100px 0;
   min-height: 100%;
   border: 0;
   border-radius: 0;
@@ -11,6 +10,13 @@ article.column-grid-content {
   background-clip: border-box;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.column-grid-modal .modal-header {
+  padding: 50px 0 120px 0;
+  background: $brand-color;
+  background: linear-gradient(130deg, $brand-color 0%, $brand-color-light 100%);
+  color: white;
 }
 
 .column-grid-modal .modal-content h2 {
@@ -38,11 +44,7 @@ article.column-grid-content {
 }
 
 .column-grid-modal .close-modal {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
+  padding: 0 15px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -56,7 +58,7 @@ article.column-grid-content {
   width: 1px;
   height: 75px;
   margin-left: 35px;
-  background-color: #222;
+  background-color: white;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -66,8 +68,30 @@ article.column-grid-content {
   z-index: 1052;
   width: 1px;
   height: 75px;
-  background-color: #222;
+  background-color: white;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.column-grid-modal .modal-body button {
+  text-align: center;
+  text-decoration:underline;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(0,0,0,0.8);
+  cursor: pointer;
+  transition: color .25s;
+  &:hover {
+    color: rgba(0,0,0,0.3);
+  }
+}
+
+.column-grid-modal .modal-body *:not(button, div) {
+  text-align: justify;
+}
+
+.column-grid-modal .modal-body a {
+  text-decoration: underline;
+  color: rgb(0, 119, 204);
 }
