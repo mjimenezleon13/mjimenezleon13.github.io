@@ -30,7 +30,7 @@
           <div class="col-lg-8">
             {% include carousel.html gallery=item.gallery galleryid=galleryid %}
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 content">
             {{ item.description | newline_to_br | markdownify}}
             <button type="button" data-dismiss="modal">&larr;Back to profile</button>
           </div>

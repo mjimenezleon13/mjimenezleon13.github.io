@@ -74,7 +74,7 @@ article.column-grid-content {
   transform: rotate(90deg);
 }
 
-.column-grid-modal .modal-body button {
+.column-grid-modal .modal-body .content button {
   text-align: center;
   text-decoration:underline;
   font-size: 1.5rem;
@@ -87,11 +87,11 @@ article.column-grid-content {
   }
 }
 
-.column-grid-modal .modal-body *:not(button, div) {
+.column-grid-modal .modal-body .content *:not(button, div) {
   text-align: justify;
 }
 
-.column-grid-modal .modal-body a {
+.column-grid-modal .modal-body .content a {
   text-decoration: underline;
   color: rgb(0, 119, 204);
 }
