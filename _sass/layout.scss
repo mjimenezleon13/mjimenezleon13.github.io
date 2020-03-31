@@ -1,3 +1,7 @@
+.bootstrap-wrapper .row {
+	margin: 0;
+}
+
 .brand-color {
 	color: $brand-color;
 }
@@ -5,7 +9,7 @@
 	font-weight: 300;
 }
 .small {
-	font-size: 1rem;
+	font-size: .8rem;
 	p {
 		font-size: inherit;
 		margin: unset;
@@ -46,7 +50,7 @@ header {
 	}
 
 	.company-name {
-		font-size: 1.7em;
+		font-size: 1.5em;
 	}
 }
 
@@ -130,11 +134,11 @@ section {
 		}
 
 		h2 {
-			font-size: 3.5rem;
+			font-size: 3.3rem;
 		}
 
 		p {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 			color: #fff;
 		}
 
@@ -164,16 +168,22 @@ section {
 	color: $brand-color;
 	text-decoration: none;
 	cursor: pointer;
-	margin: 20px 0 0 0;
+	margin: 0;
 	border: 1px solid #fff;
 	background: #fff;
 	text-decoration: none !important;
+		@media (min-width: 576px) {
+			margin: 20px 0 0 0;
+		}
 
 	&.secondary {
-		padding: 5px 20px;
+		padding: 2px 8px;
 		background-color: $secondary-brand-color;
 		border-radius: 4px;
 		color: white;
+		@media (min-width: 576px) {
+			padding: 5px 20px;
+		}
 		&:hover {
 			background-color: $secondary-brand-color-light;
 			transition: background-color .25;
@@ -281,7 +291,7 @@ section {
 	}
 
 	.name {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		color: $brand-color;
 	}
 
@@ -328,9 +338,23 @@ section {
 	}
 }
 
-.center-md-left {
-	text-align: left;
+.square-div {
+	max-width: 16vw;
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+
+	.circular-image {
+		height: 100%;
+		width: 100%;
+		max-width: 16vw;
+		max-height: 16vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
+
 
 @media only screen and (max-width: 768px) {
 	.circular-image.centered.break-sm {
@@ -363,11 +387,14 @@ section {
 	border-radius: 10px;
 	box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 	padding: 0 40px;
+	@media (max-width: 767px) {
+		padding: 0 15px;
+	}
 }
 
 .offset {
 	display: inline-block;
-	margin-top: -30px;
+	margin-top: -2vw;
 }
 
 .image-list,
@@ -399,7 +426,7 @@ ul.icon-list {
 
 	i {
 		color: $brand-color;
-		font-size: 1rem;
+		font-size: .8rem;
 		background-color: $brand-color-light;
 		padding: 8px 0px;
 		width: 30px;
@@ -412,22 +439,36 @@ ul.icon-list {
 	}
 }
 
+.xs-nopad {
+	@media (max-width: 575px) {
+		padding: 0 !important;
+	}
+}
+
 ul.specialties-list {
 	list-style-type: none;
-	margin-top: 5px;
+	margin: 5px 0 10px 0;
 	padding: 0;
-	font-size: 1rem;
+	font-size: .4rem;
+	@media (min-width: 576px) {
+		margin: 5px 0 10px 0;
+		font-size: .65rem;
+		font-weight: 400;
+	}
 	li {
 		display: inline-block;
 		background-color: darken($html-background-color, 30%);
 		color: white;
-		padding: 0 8px;
+		padding: 0 2px;
 		border-radius: 8px;
-		margin-bottom: 5px;
+		margin-bottom: 1px;
+		@media (min-width: 576px) {
+			padding: 0 8px;
+			margin-bottom: 5px;
+		}
 	}
 
 	&.ref {
-		font-size: 0.8rem;
 		margin: auto 0 0 0;
 		padding-left: 5px;
 	}
@@ -499,4 +540,10 @@ ul.star-rating {
 .horizontal-divider {
 	border-top: 1px solid rgba(0,0,0,0.2);
 	padding: 10px 0;
+}
+
+@media (max-width: 991px) {
+	.plyr__volume {
+		display: none;
+	}
 }

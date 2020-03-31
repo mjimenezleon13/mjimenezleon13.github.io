@@ -33,23 +33,23 @@ img {
 
 h1 {
 	font-weight: 300;
-	font-size: 2.3rem;
+	font-size: 1.2rem;
 	margin: 0;
 }
 
 h2 {
 	font-weight: 300;
-	font-size: 2.2rem;
+	font-size: .9rem;
 	margin: 0 0 10px 0;
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: .8rem;
 	margin: 0 0 20px 0;
 }
 
 h4 {
-	font-size: 1.5rem;
+	font-size: .65rem;
 	margin: 0 0 10px 0;
 }
 
@@ -58,14 +58,144 @@ p, address, ul, ol, pre {
 }
 
 p, address, ul, ol {
-	font-size: 1.38rem;
+	font-size: .5rem;
 	color: #666;
 	font-weight: 300;
 	line-height: 1.6;
+}
+
+ul, ol {
+	padding-left: 15px;
 }
 
 pre {
 	padding: 10px;
 	background: #eee;
 	border-radius: 2px;
+}
+
+@media (min-width: 576px) {
+	h1 {
+		font-size: 1.8rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin: 0 0 10px 0;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+		margin: 0 0 20px 0;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol, pre {
+		margin: 0 0 10px 0;
+		padding-left: inherit;
+	}
+
+	p, address, ul, ol {
+		font-size: .9rem;
+		line-height: 1.6;
+	}
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 2rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		margin: 0 0 10px 0;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+		margin: 0 0 20px 0;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol, pre {
+		margin: 0 0 10px 0;
+		padding-left: inherit;
+	}
+
+	p, address, ul, ol {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+}
+
+@media (min-width: 992px) {
+	h1 {
+		font-size: 2.1rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 2.0rem;
+		margin: 0 0 10px 0;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+		margin: 0 0 20px 0;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol, pre {
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol {
+		font-size: 1.18rem;
+		line-height: 1.6;
+	}
+}
+
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 2.1rem;
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 2.0rem;
+		margin: 0 0 10px 0;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+		margin: 0 0 20px 0;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol, pre {
+		margin: 0 0 10px 0;
+	}
+
+	p, address, ul, ol {
+		font-size: 1.18rem;
+		line-height: 1.6;
+	}
 }

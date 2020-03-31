@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="hero">
+<section class="hero" style="padding-top: 200px;">
 	<div class="container">
 		<h3 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}/profiles/">&larr;Back to profiles</a></h3>
 	</div>
@@ -11,20 +11,22 @@ layout: default
 	<div class="container">
 		<div class="floating-container bootstrap-wrapper">
 			<div class="row">
-				<div class="col-md-3" style="text-align: center;">
-					<div class="circular-image offset">
-						<img src="{% include relative-src.html src=page.profile_image %}">
+				<div class="col-4 col-sm-3 col-md-3 col-lg-2" style="max-height: 14vw;">
+					<div class="square-div offset">
+						<div class="circular-image">
+							<img src="{% include relative-src.html src=page.profile_image %}">
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6 center-md-left">
-					<h3 style="font-weight: 300; margin: 20px 0 0 0;">{{page.name}}</h3>
+				<div class="col-9 col-sm-6 col-md-6 col-lg-8">
+					<h3 style="font-weight: 300; margin: 1vw 0 0 0;">{{page.name}}</h3>
 					<ul class="specialties-list">
 						{% for specialty in page.specialties %}
 							<li>{{specialty | strip}}</li>
 						{% endfor %}
 					</ul>
 				</div>
-				<div class="col-md-3" style="text-align: center;">
+				<div class="col-3 col-sm-3 col-md-3 col-lg-2" style="text-align: center;">
 					<p><a class="button secondary" href="{{ site.baseurl }}/contact/">Contactar</a></p>
 				</div>
 			</div>
@@ -74,20 +76,22 @@ layout: default
 				<div class="container horizontal-divider" id="references">
 					<h2>References</h2>
 					{% for reference in page.references %}
-					<div class="ref-item bootstrap-wrapper container">
+					<div class="ref-item bootstrap-wrapper">
 						<div class="row ref-header">
-							<div class="col-md-2 ref-profile">
-								<div class="circular-image small centered break-sm">
-									{% if reference.link %}
-									<a href="{{reference.link}}" target="_blank">
-									{% endif %}
-										<img src="{% include relative-src.html src=reference.profile_image %}">
-									{% if reference.link %}
-									</a>
-									{% endif %}
+							<div class="col-3 col-md-2 ref-profile" style="max-height: 16vw;padding-left:5px;">
+								<div class="square-div">
+									<div class="circular-image small centered break-sm">
+										{% if reference.link %}
+										<a href="{{reference.link}}" target="_blank">
+											{% endif %}
+											<img src="{% include relative-src.html src=reference.profile_image %}">
+											{% if reference.link %}
+										</a>
+										{% endif %}
+									</div>
 								</div>
 							</div>
-							<div class="col-md-10">
+							<div class="col-9 col-lg-10" style="padding-left:5px;">
 								<div class="row">
 									{% if reference.link %}
 									<a href="{{reference.link}}" target="_blank">
@@ -96,7 +100,7 @@ layout: default
 									{% if reference.link %}
 									</a>
 									{% endif %}
-									<ul class="specialties-list ref" style="font-size: 0.8rem;margin:auto 0 0 0;">
+									<ul class="specialties-list ref">
 										{% for specialty in reference.specialties %}
 										<li>{{specialty | strip}}</li>
 										{% endfor %}
