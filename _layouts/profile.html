@@ -22,7 +22,7 @@ layout: default
 					<h3 style="font-weight: 300; margin: 1vw 0 0 0;">{{page.name}}</h3>
 					<ul class="specialties-list">
 						{% for specialty in page.specialties %}
-							<li>{{specialty | strip}}</li>
+						<li>{{specialty | strip}}</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -30,119 +30,130 @@ layout: default
 					<p><a class="button secondary" href="{{ site.baseurl }}/contact/">Contactar</a></p>
 				</div>
 			</div>
-			<div>
 
 			<!-- PROFILE DESCRIPTION -->
 			<div class="prof-description container">
 				<p>{{page.description | newline_to_br }}</p>
+				<div>
+					<div class="social-links">
+						<ul>
+							{% for link in page.social-links %}
+							<li><a href="{{link.url}}" target="_blank">{% include social-icon.html icon=link.icon %}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="location">
+						<p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{page.location}}</p>
+					</div>
+				</div>
 			</div>
 			<!-- /PROFILE DESCRIPTION -->
 
 			<!-- FEATURED ITEMS -->
 			{% if page.featured %}
-				<div class="bootstrap-wrapper container horizontal-divider">
-					<h2 id="featured">Featured</h2>
-					{% for media in page.featured %}
-						{% assign mod_idx = forloop.index | minus: 1 | modulo: 2%}
-						{% if mod_idx == 0 %}
-							<div class="row" style="margin-bottom: 15px;">
-						{% endif %}
-						<div class="col-md-6 retain-aspect">
-							{% include multimedia.html media=media %}
-							{% if mod_idx == 1 %}
-								</div>
-							{% endif %}
-						</div>
-					{% endfor %}
+			<div class="bootstrap-wrapper container horizontal-divider">
+				<h2 id="featured">Featured</h2>
+				{% for media in page.featured %}
+				{% assign mod_idx = forloop.index | minus: 1 | modulo: 2%}
+				{% if mod_idx == 0 %}
+				<div class="row" style="margin-bottom: 15px;">
+					{% endif %}
+					<div class="col-md-6 retain-aspect">
+						{% include multimedia.html media=media %}
+						{% if mod_idx == 1 %}
+					</div>
+					{% endif %}
 				</div>
+				{% endfor %}
+			</div>
 			{% endif %}
 			<!-- /FEATURED ITEMS -->
 
 			<!-- SERVICES -->
 			{% if page.services %}
-				<div class="container horizontal-divider" id="services">
-					<h2>Services</h2>
-					<ul>
-						{% for service in page.services %}
-							<li>{{service | strip}}</li>
-						{% endfor %}
-					</ul>
-				</div>
+			<div class="container horizontal-divider" id="services">
+				<h2>Services</h2>
+				<ul>
+					{% for service in page.services %}
+					<li>{{service | strip}}</li>
+					{% endfor %}
+				</ul>
+			</div>
 			{% endif %}
 			<!-- /SERVICES -->
 
 			<!-- REFERENCES -->
 			{% if page.references %}
-				<div class="container horizontal-divider" id="references">
-					<h2>References</h2>
-					{% for reference in page.references %}
-					<div class="ref-item bootstrap-wrapper">
-						<div class="row ref-header">
-							<div class="col-3 col-md-2 ref-profile" style="max-height: 16vw;padding-left:5px;">
-								<div class="square-div">
-									<div class="circular-image small centered break-sm">
-										{% if reference.link %}
-										<a href="{{reference.link}}" target="_blank">
-											{% endif %}
-											<img src="{% include relative-src.html src=reference.profile_image %}">
-											{% if reference.link %}
-										</a>
-										{% endif %}
-									</div>
-								</div>
-							</div>
-							<div class="col-9 col-lg-10" style="padding-left:5px;">
-								<div class="row">
+			<div class="container horizontal-divider" id="references">
+				<h2>References</h2>
+				{% for reference in page.references %}
+				<div class="ref-item bootstrap-wrapper">
+					<div class="row ref-header">
+						<div class="col-3 col-md-2 ref-profile" style="max-height: 16vw;padding-left:5px;">
+							<div class="square-div">
+								<div class="circular-image small centered break-sm">
 									{% if reference.link %}
 									<a href="{{reference.link}}" target="_blank">
-									{% endif %}
-										<h3 style="font-weight: 300; margin: 0;">{{reference.name}}</h3>
-									{% if reference.link %}
+										{% endif %}
+										<img src="{% include relative-src.html src=reference.profile_image %}">
+										{% if reference.link %}
 									</a>
 									{% endif %}
-									<ul class="specialties-list ref">
-										{% for specialty in reference.specialties %}
-										<li>{{specialty | strip}}</li>
-										{% endfor %}
-									</ul>
-								</div>
-								<div class="row" style="position: relative; display: inline-block;">
-									<ul class="star-rating unchecked">
-										<li><i class="far fa-star"></i></li>
-										<li><i class="far fa-star"></i></li>
-										<li><i class="far fa-star"></i></li>
-										<li><i class="far fa-star"></i></li>
-										<li><i class="far fa-star"></i></li>
-									</ul>
-									<ul class="star-rating checked" style="width: calc({{reference.rating_number}}/5.0*100%)">
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-										<li><i class="fas fa-star"></i></li>
-									</ul>
-								</div>
-								<div class="row">
-									<p>{{reference.description | newline_to_br}}</p>
 								</div>
 							</div>
 						</div>
+						<div class="col-9 col-lg-10" style="padding-left:5px;">
+							<div class="row">
+								{% if reference.link %}
+								<a href="{{reference.link}}" target="_blank">
+									{% endif %}
+									<h3 style="font-weight: 300; margin: 0;">{{reference.name}}</h3>
+									{% if reference.link %}
+								</a>
+								{% endif %}
+								<ul class="specialties-list ref">
+									{% for specialty in reference.specialties %}
+									<li>{{specialty | strip}}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="row" style="position: relative; display: inline-block;">
+								<ul class="star-rating unchecked">
+									<li><i class="far fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+								</ul>
+								<ul class="star-rating checked" style="width: calc({{reference.rating_number}}/5.0*100%)">
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+								</ul>
+							</div>
+							<div class="row">
+								<p>{{reference.description | newline_to_br}}</p>
+							</div>
+						</div>
 					</div>
-					{% endfor %}
 				</div>
+				{% endfor %}
+			</div>
 			{% endif %}
 			<!-- /REFERENCES -->
 
 			<!-- TRAYECTORY -->
 			{% if page.trayectory %}
-				<div class="container horizontal-divider" id="services">
-					<h2>Trayectory</h2>
-					<ul>
-						{% for trayectory in page.trayectory %}
-							<li>{{trayectory | strip}}</li>
-						{% endfor %}
-					</ul>
-				</div>
+			<div class="container horizontal-divider" id="services">
+				<h2>Trayectory</h2>
+				<ul>
+					{% for trayectory in page.trayectory %}
+					<li>{{trayectory | strip}}</li>
+					{% endfor %}
+				</ul>
+			</div>
 			{% endif %}
 			<!-- /TRAYECTORY -->
 
@@ -154,9 +165,9 @@ layout: default
 				</div>
 			</div>
 			<!-- /PROJECTS -->
-			</div>
 		</div>
 	</div>
+</div>
 </section>
 <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
 <script>

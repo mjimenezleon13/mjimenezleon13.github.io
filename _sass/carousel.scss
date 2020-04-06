@@ -2,9 +2,18 @@
   background-color: rgba(175,175,175,.1);
 }
 
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+}
+
 .carousel-inner>.item {
-  height: 100vh;
-  max-height: 60vh;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
   background: black;
 }
 

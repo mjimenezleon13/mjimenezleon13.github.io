@@ -181,9 +181,6 @@ section {
 		background-color: $secondary-brand-color;
 		border-radius: 4px;
 		color: white;
-		@media (min-width: 576px) {
-			padding: 5px 20px;
-		}
 		&:hover {
 			background-color: $secondary-brand-color-light;
 			transition: background-color .25;
@@ -545,5 +542,40 @@ ul.star-rating {
 @media (max-width: 991px) {
 	.plyr__volume {
 		display: none;
+	}
+}
+
+.prof-description {
+	p {
+		padding-left: 0;
+	}
+}
+
+.social-links {
+	display: inline-block;
+	float: left;
+	ul {
+		padding-left: 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			svg {
+				fill: gray;
+			}
+			a {
+				transition: opacity .25s;
+			}
+			a:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+.location {
+	display: inline-block;
+	float: right;
+	i {
+		color: $secondary-brand-color;
 	}
 }

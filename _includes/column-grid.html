@@ -35,12 +35,12 @@ displays a modal with the content of the item.
   {% assign item-column = forloop.index | minus: 1 | modulo: include.lg-columns %}
   {% if item-column == i %}
   <a href="#{{ identifier }}Modal{{ forloop.index }}" class="column-grid-link" data-toggle="modal">
-    <div class="column-grid-hover" style="background-color: {{item.bg_color}}">
+    <div class="column-grid-hover">
       <div class="column-grid-hover-content">
-        <h6>{{item.title}}</h6>
-        <hr/>
-        <p>Ver imágenes <i class="fa fa-chevron-right"></i></p>
+        <h4>{{item.title}}</h4>
+        <p>Ver más <i class="fa fa-chevron-right"></i></p>
       </div>
+      <img src="{{ item.image | prepend: site.baseurl }}" class="img-responsive img-centered" alt="">
     </div>
     <img src="{{ item.image | prepend: site.baseurl }}" class="img-responsive img-centered" alt="">
   </a>
