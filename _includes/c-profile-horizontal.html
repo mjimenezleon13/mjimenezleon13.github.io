@@ -1,0 +1,32 @@
+{% assign profile = includes.profile %}
+<a href="{{site.baseurl}}{{profile.url}}">
+  <div class="row">
+    <div class="col-3">
+      <div class="square-div small-centered">
+        <div class="circular-image">
+          <img src="{% include relative-src.html src=profile.profile_image %}">
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <h3 style="margin: 0;">{{ profile.name }}</h3>
+      <ul class="specialties-list">
+        {% for specialty in profile.specialties %}
+        <li>{{specialty | strip}}</li>
+        {% endfor %}
+      </ul>
+      <div style="margin-top: auto;">
+        <div class="social-links">
+          {% if profile.social-links %}
+          <p>Links: {{profile.social-links | size}}</p>
+          {% endif %}
+        </div>
+        <div class="location">
+          {% if profile.location %}
+          <p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

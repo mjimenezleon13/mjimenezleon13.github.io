@@ -28,6 +28,11 @@
 
 .container {
 	max-width: 1000px;
+	&.md-full {
+		@media (max-width: 787px) {
+			max-width: unset;
+		}
+	}
 }
 
 header {
@@ -128,6 +133,12 @@ section {
 		text-align: left;
 		margin-top: -100px;
 		padding-top: 250px;
+
+		&.sm-shrink {
+			@media (max-width: 575px) {
+				padding-bottom: 50px;
+			}
+		}
 
 		h2, p {
 			max-width: 90%;
@@ -338,8 +349,13 @@ section {
 .square-div {
 	max-width: 16vw;
 	width: 100%;
-	padding-top: 100%;
 	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
 
 	.circular-image {
 		height: 100%;
@@ -349,6 +365,19 @@ section {
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+
+	&.small-centered {
+		max-width: 6vw;
+		min-width: 64px;
+		margin: 0 auto;
+
+		.circular-image {
+			max-width: 6vw;
+			max-height: 6vw;
+			min-width: 64px;
+			min-height: 64px;
+		}
 	}
 }
 
@@ -373,8 +402,14 @@ section {
 			height: 100%;
 			width:100%;
 		}
+	}
 }
 
+.card {
+	text-align: center;
+	h3 {
+		font-size: 1.2rem;
+	}
 }
 
 
@@ -389,9 +424,21 @@ section {
 	}
 }
 
+.container.card {
+	margin-top: 0;
+	top: -200px;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+}
+
 .offset {
 	display: inline-block;
 	margin-top: -2vw;
+	width: 100%;
 }
 
 .image-list,
@@ -577,5 +624,23 @@ ul.star-rating {
 	float: right;
 	i {
 		color: $secondary-brand-color;
+	}
+}
+
+.row.same-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	& > [class*='col-'] {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+h3.sm-large {
+	@media (max-width: 575px) {
+		font-size: 1.3rem;
 	}
 }

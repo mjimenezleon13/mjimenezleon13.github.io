@@ -24,6 +24,13 @@
         <div class="row">
           <div class="col-lg-8">
             {% include carousel.html gallery=item.gallery galleryid=galleryid %}
+            {% if participants %}
+              <div class="horizontal-divider">
+                <h3>Participants</h3>
+                {% for participant in item.profiles %}
+                {% endfor %}
+              </div>
+            {% endif %}
           </div>
           <div class="col-lg-4 content">
             {{ item.description | newline_to_br | markdownify}}

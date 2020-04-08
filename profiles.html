@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="hero sm-shrink" style="padding-top: 200px;">
+	<div class="container">
+		<h3 class="sm-large" style="font-weight: 300; text-align: center;">PROFILES</h3>
+	</div>
+</section>
+
+<section class="diagonal-top bootstrap-wrapper">
+  <div class="container md-full">
+    <div class="row same-height">
+    {% for profile in site.profiles %}
+      {% assign idx = forloop.index | minus: 1 | modulo: 3 %}
+      <div class="col-6 col-sm-4 hidden-xs-down">
+        <div class="container floating-container card">
+          {% include c-profile-vertical.html profile=profile %}
+        </div>
+      </div>
+      <div class="hidden-sm-up horizontal-divider" style="width: 100%;position:relative;top:-80px;">
+          {% include c-profile-horizontal.html profile=profile %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

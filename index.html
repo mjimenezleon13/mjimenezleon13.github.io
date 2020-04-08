@@ -43,12 +43,22 @@ title: Suira
 	</div>
 </section>
 
-<section class="long-bottom">
+<section>
 	<div class="container">
 		<div class="centered-text">
 			<h2 class="brand-color light-text editable">{{ page.i18n.profiles_html }}</h2>
 			<p class="small">Lorem ipsum</p>
-			<div class="variable-columns">
+			<div class="variable-columns bootstrap-wrapper" style="margin-top: 100px;">
+				<div class="row">
+					{% for profile in site.profiles %}
+					{% assign idx = forloop.index | minus: 1 | modulo: 3 %}
+					<div class="col-sm-4" style="margin-bottom: 15px;">
+						<div class="container">
+							{% include c-profile-vertical.html profile=profile %}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
 			</div>
 			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">{{ page.i18n.profiles_link }} &rarr;</a></p>
 		</div>

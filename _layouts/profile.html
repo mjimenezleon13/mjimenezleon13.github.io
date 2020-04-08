@@ -9,12 +9,15 @@ layout: default
 
 <section class="diagonal-top">
 	<div class="container">
+
 		<div class="floating-container bootstrap-wrapper">
 			<div class="row">
 				<div class="col-4 col-sm-3 col-md-3 col-lg-2" style="max-height: 14vw;">
-					<div class="square-div offset">
-						<div class="circular-image">
-							<img src="{% include relative-src.html src=page.profile_image %}">
+					<div class="offset">
+						<div class="square-div">
+							<div class="circular-image">
+								<img src="{% include relative-src.html src=page.profile_image %}">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -43,7 +46,9 @@ layout: default
 						</ul>
 					</div>
 					<div class="location">
+						{% if page.location %}
 						<p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{page.location}}</p>
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -158,12 +163,14 @@ layout: default
 			<!-- /TRAYECTORY -->
 
 			<!-- PROJECTS -->
+			{% if page.projects %}
 			<div class="container horizontal-divider" id="projects">
 				<h2>Projects</h2>
 				<div class="row" style="margin: 0;">
 					{% include column-grid.html  identifier="projects" lg-columns=3 sm-columns=2 xs-columns=1 items=page.projects %}
 				</div>
 			</div>
+			{% endif %}
 			<!-- /PROJECTS -->
 		</div>
 	</div>
