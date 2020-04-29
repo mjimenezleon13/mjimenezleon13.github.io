@@ -1,0 +1,35 @@
+{% assign profile = includes.profile %}
+{% assign prof_name = includes.profile_name %}
+{% if prof_name %}
+{% assign profile = site.profiles
+  | where_exp: "profile", "profile.path contains prof_name" | first %}
+  {% endif %}
+  <div class="container profile-card">
+    <a href="{{site.baseurl}}{{profile.url}}">
+      <div class="offset">
+        <div class="square-div small-centered">
+          <div class="circular-image">
+            <img src="{% include relative-src.html src=profile.profile_image %}">
+          </div>
+        </div>
+      </div>
+      <h4>{{ profile.name }}</h4>
+      <ul class="specialties-list">
+        {% for specialty in profile.specialties %}
+        <li>{{specialty | strip}}</li>
+        {% endfor %}
+      </ul>
+      <div class="p-card">
+        <div class="social-links">
+          {% if profile.social-links %}
+          <p>Links: {{profile.social-links | size}}</p>
+          {% endif %}
+        </div>
+        <div class="location">
+          {% if profile.location %}
+          <p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</p>
+          {% endif %}
+        </div>
+      </div>
+    </a>
+  </div>

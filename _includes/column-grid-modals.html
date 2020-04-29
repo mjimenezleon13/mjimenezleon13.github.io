@@ -22,17 +22,25 @@
       <div class="container">
         <hr class="star-primary">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-7">
             {% include carousel.html gallery=item.gallery galleryid=galleryid %}
-            {% if participants %}
+            {% if item.profiles or item.custom_participants%}
               <div class="horizontal-divider">
                 <h3>Participants</h3>
-                {% for participant in item.profiles %}
+                {% for prof_name in item.profiles %}
+                <div class="participant horizontal-divider" style="width: 100%;">
+                  {% include c-profile-horizontal.html %}
+                </div>
+                {% endfor %}
+                {% for profile in item.custom_participants %}
+                <div class="participant horizontal-divider" style="width: 100%;">
+                  {% include c-profile-horizontal.html %}
+                </div>
                 {% endfor %}
               </div>
             {% endif %}
           </div>
-          <div class="col-lg-4 content">
+          <div class="col-lg-5 content">
             {{ item.description | newline_to_br | markdownify}}
             <button type="button" data-dismiss="modal">&larr;Back to profile</button>
           </div>
