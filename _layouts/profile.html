@@ -12,7 +12,7 @@ layout: default
 
 		<div class="floating-container bootstrap-wrapper">
 			<div class="row">
-				<div class="col-4 col-sm-3 col-md-3 col-lg-2" style="max-height: 14vw;">
+				<div class="col-4 col-sm-3 col-md-3 col-lg-2 prof-header" style="max-height: 14vw;">
 					<div class="offset">
 						<div class="square-div">
 							<div class="circular-image">
@@ -37,7 +37,7 @@ layout: default
 			<!-- PROFILE DESCRIPTION -->
 			<div class="prof-description container">
 				<p>{{page.description | newline_to_br }}</p>
-				<div>
+				<div class="space-between">
 					<div class="social-links">
 						<ul>
 							{% for link in page.social-links %}
@@ -174,7 +174,6 @@ layout: default
 			<!-- /PROJECTS -->
 		</div>
 	</div>
-</div>
 </section>
 <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
 <script>

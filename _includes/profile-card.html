@@ -13,22 +13,24 @@
           </div>
         </div>
       </div>
-      <h4>{{ profile.name }}</h4>
-      <ul class="specialties-list">
-        {% for specialty in profile.specialties %}
-        <li>{{specialty | strip}}</li>
-        {% endfor %}
-      </ul>
-      <div class="p-card">
-        <div class="social-links">
-          {% if profile.social-links %}
-          <p>Links: {{profile.social-links | size}}</p>
-          {% endif %}
-        </div>
-        <div class="location">
-          {% if profile.location %}
-          <p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</p>
-          {% endif %}
+      <div class="card-content">
+        <h4>{{ profile.name }}</h4>
+        <ul class="specialties-list">
+          {% for specialty in profile.specialties %}
+          <li>{{specialty | strip}}</li>
+          {% endfor %}
+        </ul>
+        <div class="space-between">
+          <div class="social-links">
+            {% if profile.social-links %}
+            <p>Links: {{profile.social-links | size}}</p>
+            {% endif %}
+          </div>
+          <div class="location">
+            {% if profile.location %}
+            <p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</p>
+            {% endif %}
+          </div>
         </div>
       </div>
     </a>
