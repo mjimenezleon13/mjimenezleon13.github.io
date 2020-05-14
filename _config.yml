@@ -51,7 +51,6 @@ plugins:
   - "jekyll-seo-tag"
   - "jekyll-paginate"
   - "jekyll-archives"
-  - "jekyll_i18n_multi_page"
 
 exclude:
   - Gemfile
@@ -120,9 +119,3 @@ social_icons:
   - Twitter
   - YouTube
   - RSS
-
-i18n:
-  - path: /
-    locale: es
-  - path: /en
-    local: en

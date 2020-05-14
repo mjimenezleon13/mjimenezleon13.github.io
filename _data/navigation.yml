@@ -1,5 +1,11 @@
 links:
-- name: Profiles
-  link: /profiles/
-- name: Contact
-  link: /contact/
+  en:
+    - name: Profiles
+      link: /profiles/
+    - name: Contact
+      link: /contact/
+  es:
+    - name: Perfiles
+      link: /es/profiles
+    - name: Contacto
+      link: /es/contact

@@ -1,0 +1,14 @@
+<section class="hero sm-shrink" style="padding-top: 200px;">
+	<div class="container">
+		<h3 class="sm-large" style="font-weight: 300; text-align: center;">{{page.title | upcase }}</h3>
+	</div>
+</section>
+<section class="diagonal-top">
+	<div class="container grid">
+		<div class="profile-grid">
+			{% for profile in site.profiles %}
+				{% include profile-card.html profile=profile %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

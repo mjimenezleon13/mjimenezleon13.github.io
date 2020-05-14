@@ -1,66 +1,24 @@
 ---
 title: Suira
+lang: en
+ref: en
+
+hero_title_html: The Digital Management for <strong>Creatives</strong> & <strong>Freelancers</strong>
+hero_list_minus: Less time in administrative work.
+hero_list_plus: More time in your creativity.
+
+apply_btn: Apply
+
+market_problem_title_html: How much time and <strong>energy do you spend:</strong>
+market_problem_subtitle: Lorem Ipsum
+market_problem_list_search: Finding work and gigs?
+market_problem_list_alliance: Creating the right alliances?
+market_problem_list_clients: Charging and dealing with clients?
+market_problem_list_business: Keeping track of your business?
+
+purpose_html: We want to see a world where <strong>Creatives</strong> & <strong>Freelancers</strong> live doing what they <strong>love.</strong>
+
+profiles_html: Some of <strong>our profiles...</strong>
+profiles_link: See all profiles
 ---
-<section class="hero">
-	<div class="container halves">
-		<div>
-			<p class="">{{ page.i18n.hero_title_html }}</p>
-			<div class="small">
-				<p>- {{  page.i18n.hero_list_minus }}</p>
-				<p><strong>+ {{  page.i18n.hero_list_plus }}</strong></p>
-			</div>
-			<p><a class="button alt" href="{{ site.baseurl }}/contact/">Aplicar</a></p>
-		</div>
-		<div>
-			<img src="{{ site.baseurl }}/images/suira-landing-illustration.svg">
-		</div>
-	</div>
-</section>
-
-<section class="diagonal-top">
-	<div class="container halves">
-		<div>
-			<h2 class="brand-color light-text editable">{{  page.i18n.market_problem_title_html }}</h2>
-			<div class="small">
-				<p class="editable">{{  page.i18n.market_problem_subtitle }}</p>
-				<ul class="icon-list">
-					<li><i class="fas fa-search"></i>{{  page.i18n.market_problem_list_search }}</li>
-					<li><i class="fas fa-hands-helping"></i>{{  page.i18n.market_problem_list_alliance }}</li>
-					<li><i class="fas fa-money-bill-wave"></i>{{  page.i18n.market_problem_list_clients }}</li>
-					<li><i class="fas fa-chart-line"></i>{{  page.i18n.market_problem_list_business }}</li>
-				</ul>
-			</div>
-		</div>
-		<div>
-			<img src="{{ site.baseurl }}/images/suira-illustration-2.svg">
-		</div>
-	</div>
-</section>
-
-<section class="dark-transparent light-text purpose centered-text" >
-	<div class="container">
-		<h2>{{  page.i18n.purpose_html }}</h2>
-	</div>
-</section>
-
-<section>
-	<div class="container">
-		<div class="centered-text">
-			<h2 class="brand-color light-text editable">{{ page.i18n.profiles_html }}</h2>
-			<p class="small">Lorem ipsum</p>
-			<div class="variable-columns bootstrap-wrapper" style="margin-top: 100px;">
-				<div class="row">
-					{% for profile in site.profiles %}
-					{% assign idx = forloop.index | minus: 1 | modulo: 3 %}
-					<div class="col-sm-4" style="margin-bottom: 15px;">
-						<div class="container">
-							{% include c-profile-vertical.html profile=profile %}
-						</div>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">{{ page.i18n.profiles_link }} &rarr;</a></p>
-		</div>
-	</div>
-</section>
+{% include landing.html %}
