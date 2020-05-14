@@ -1,0 +1,21 @@
+t:
+  en:
+    prof_back:
+      text: Back to profiles
+      url: /profiles
+    contact_btn: Contact
+    featured_title: Featured
+    services_title: Services
+    references_title: References
+    trayectory_title: Trayectory
+    projects_title: Projects
+  es:
+    prof_back:
+      text: Volver a perfiles
+      url: /es/profiles
+    contact_btn: Contactar
+    featured_title: Destacado
+    services_title: Servicios
+    references_title: Referencias
+    trayectory_title: Trayectoria
+    projects_title: Proyectos

@@ -19,6 +19,10 @@ html, body {
 	}
 }
 
+.en:lang(en), .es:lang(es) {
+	font-weight: bold;
+}
+
 .bootstrap-wrapper .row {
 	margin: 0;
 }
