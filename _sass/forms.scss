@@ -1,7 +1,7 @@
 input[type=submit] {
 	color: #fff;
 	text-decoration: none;
-	padding: 20px 30px;
+	padding: 10px 30px;
 	border-radius: 3px;
 	transition: 0.2s ease-in-out;
 	border: 1px solid $brand-color;
@@ -10,7 +10,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	border: 1px solid $brand-color;
+	border: 1px solid $secondary-brand-color;
 	background: $secondary-brand-color;
 }
 
@@ -40,19 +40,31 @@ textarea {
 
 textarea {
 	resize: vertical;
-	height: 250px;
+	height: 150px;
 }
 
 label {
-	margin: 30px 0 10px 0;
+	margin: 15px 0 10px 0;
 	font-size: 1.2em;
 }
 
 input,
 textarea {
-	padding: 20px;
+	padding: 5px;
 	font-size: 1.2em;
 	border-radius: 3px;
+}
+
+@media (max-width: 575px) {
+	label,
+	input,
+	textarea {
+		font-size: 0.7rem;
+	}
+
+	label {
+		margin: 8px 0 4px 0;
+	}
 }
 
 input,

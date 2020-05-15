@@ -9,6 +9,18 @@ t:
     references_title: References
     trayectory_title: Trayectory
     projects_title: Projects
+    contact_title: Contact
+    f_name: First Name
+    f_name_placeholder: John
+    l_name: Last Name
+    l_name_placeholder: Doe
+    input_email: Email Address
+    email_placeholder: john@example.com
+    subject: Subject
+    subject_placeholder: My subject
+    msg: Message
+    msg_placeholder: Hi there...
+    submit_txt: Send Message
   es:
     prof_back:
       text: Volver a perfiles
@@ -19,3 +31,15 @@ t:
     references_title: Referencias
     trayectory_title: Trayectoria
     projects_title: Proyectos
+    contact_title: Contacto
+    f_name: Nombre(s)
+    f_name_placeholder: John
+    l_name: Apellido
+    l_name_placeholder: Doe
+    input_email: Correo Electrónico
+    email_placeholder: john@ejemplo.com
+    subject: Asunto
+    subject_placeholder: Mi asunto
+    msg: Mensaje
+    msg_placeholder: Hola...
+    submit_txt: Enviar Mensaje

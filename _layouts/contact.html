@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<section class="hero sm-shrink" style="padding-top: 200px;">
+	<div class="container">
+		<h3 class="sm-large" style="font-weight: 300; text-align: center;">{{page.title | upcase }}</h3>
+	</div>
+</section>
+<section class="diagonal-top" style="padding: 0;">
+	<div class="container">
+		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+			<input type="hidden" name="_to" value="support@example.com" />
+			<input type="text" name="_gotcha" style="display: none;" />
+
+			<div class="halves">
+				<div>
+					<label for="name">{{page.f_name}}</label>
+					<input type="text" name="first-name" id="first-name" placeholder="{{page.f_name_placeholder}}" />
+				</div>
+
+				<div>
+					<label for="name">{{page.l_name}}</label>
+					<input type="text" name="last-name" id="last-name" placeholder="{{page.l_name_placeholder}}" />
+				</div>
+			</div>
+
+			<label for="email">{{page.input_email}}</label>
+			<input type="email" name="email" id="email" placeholder="{{page.email_placeholder}}" required />
+
+			<label for="subject">{{page.input_email}}</label>
+			<input type="text" name="subject" id="subject" placeholder="{{page.subject_placeholder}}" required />
+
+			<label for="message">{{page.msg}}</label>
+			<textarea name="message" id="message" placeholder="{{page.msg_placeholder}}"></textarea>
+
+			<input type="submit" value="{{page.submit_txt}}" />
+		</form>
+	</div>
+</section>
+
+<section class="">
+	<div class="container halves aligned-top">
+		<div>
+			<h3>{{page.phone}}</h3>
+				<phone><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></phone>
+		</div>
+		<div>
+			<h3>{{page.email}}</h3>
+			<p><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></p>
+		</div>
+	</div>
+</section>

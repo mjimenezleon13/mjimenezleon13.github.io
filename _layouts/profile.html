@@ -31,7 +31,7 @@ layout: default
 					</ul>
 				</div>
 				<div class="col-3 col-sm-3 col-md-3 col-lg-2" style="text-align: center;">
-					<p><a class="button secondary" href="{{ site.baseurl }}/contact/">{{t.contact_btn}}</a></p>
+					<p><a class="button secondary page-scroll" href="#contact">{{t.contact_btn}}</a></p>
 				</div>
 			</div>
 
@@ -173,6 +173,37 @@ layout: default
 			</div>
 			{% endif %}
 			<!-- /PROJECTS -->
+
+			<!-- CONTACT -->
+			<div class="container horizontal-divider" id="contact">
+				<h2>{{t.contact_title}}</h2>
+					<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+						<input type="hidden" name="_to" value="support@example.com" />
+						<input type="text" name="_gotcha" style="display: none;" />
+
+						<div class="halves">
+							<div>
+								<label for="name">{{t.f_name}}</label>
+								<input type="text" name="first-name" id="first-name" placeholder="{{t.f_name_placeholder}}" />
+							</div>
+
+							<div>
+								<label for="name">{{t.l_name}}</label>
+								<input type="text" name="last-name" id="last-name" placeholder="{{t.l_name_placeholder}}" />
+							</div>
+						</div>
+
+						<label for="email">{{t.input_email}}</label>
+						<input type="email" name="email" id="email" placeholder="{{t.email_placeholder}}" required />
+
+						<label for="message">{{t.msg}}</label>
+						<textarea name="message" id="message" placeholder="{{t.msg_placeholder}}"></textarea>
+
+						<input type="submit" value="{{t.submit_txt}}" />
+					</form>
+			</div>
+			<!-- /CONTACT -->
+
 		</div>
 	</div>
 </section>
@@ -193,19 +224,4 @@ $(document).ready(() => {
 		});
 	});
 })
-// for (const player in carousel_players) {
-// 	const gallery = $(player).closest('.carousel');
-//
-// 	console.log($(player).html());
-// 		$(player).on('play', (e) => {
-// 			console.log($());
-// 			console.log("PLAYING");
-// 			// $(gallery).carousel('pause');
-// 		});
-// 		$(player).on('pause', (e) => {
-// 			console.log($(player));
-// 			console.log("STOPPED");
-// 			// $(gallery).carousel('cycle');
-// 		});
-// 	}
 </script>

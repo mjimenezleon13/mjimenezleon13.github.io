@@ -6,6 +6,10 @@ footer {
 	background: $html-background-color;
 	color: #fff;
 
+	@media (max-width: 575px) {
+		min-height: 80px;
+	}
+
 	&,
 	a {
 		color: #999;
