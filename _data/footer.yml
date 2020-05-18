@@ -1,30 +1,36 @@
-- title: Pages
-  links:
-    - name: Home
+navlinks:
+  es:
+    - name: Suira
+      link: /es/
+    - name: T&C
+      link: /es/ToS
+    - name: FAQ
+      link: /es/FAQ
+  en:
+    - name: Suira
       link: /
-    - name: Portfolio
-      link: /portfolio/
-    - name: Blog
-      link: /blog/
-    - name: About
-      link: /about/
-    - name: Contact
-      link: /contact/
-- title: Social
-  links:
-    - name: Facebook
-      link: https://facebook.com/cloudcannon/
-      social_icon: Facebook
-      new_window: true
-    - name: Twitter
-      link: https://twitter.com/cloudcannon/
-      social_icon: Twitter
-      new_window: true
-    - name: Instagram
-      link: https://instagram.com/
-      social_icon: Instagram
-      new_window: true
-    - name: LinkedIn
-      link: https://nz.linkedin.com/company/cloud-cannon
-      social_icon: LinkedIn
-      new_window: true
+    - name: ToS
+      link: /ToS
+    - name: FAQ
+      link: /FAQ
+socialinks:
+  - name: Facebook
+    link: https://facebook.com/cloudcannon/
+    social_icon: Facebook
+    new_window: true
+  - name: Twitter
+    link: https://twitter.com/cloudcannon/
+    social_icon: Twitter
+    new_window: true
+  - name: Instagram
+    link: https://instagram.com/
+    social_icon: Instagram
+    new_window: true
+  - name: LinkedIn
+    link: https://nz.linkedin.com/company/cloud-cannon
+    social_icon: LinkedIn
+    new_window: true
+  - name: Youtube
+    link: https://youtube.com/
+    social_icon: Youtube
+    new_window: true

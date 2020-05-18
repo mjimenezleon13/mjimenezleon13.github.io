@@ -38,7 +38,7 @@ layout: default
 	<div class="container halves aligned-top">
 		<div>
 			<h3>{{page.phone}}</h3>
-				<phone><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></phone>
+				<phone><a target="_blank" href="tel:{{site.data.company.contact_phone_number}}">{{ site.data.company.contact_phone_number }}</a></phone>
 		</div>
 		<div>
 			<h3>{{page.email}}</h3>
