@@ -8,8 +8,7 @@ layout: default
 </section>
 <section class="diagonal-top" style="padding: 0;">
 	<div class="container">
-		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-			<input type="hidden" name="_to" value="support@example.com" />
+		<form action="http://formspree.io/{{site.data.company.contact_form_email}}" method="post" class="contact-form">
 			<input type="text" name="_gotcha" style="display: none;" />
 
 			<div class="halves">
@@ -26,9 +25,6 @@ layout: default
 
 			<label for="email">{{page.input_email}}</label>
 			<input type="email" name="email" id="email" placeholder="{{page.email_placeholder}}" required />
-
-			<label for="subject">{{page.input_email}}</label>
-			<input type="text" name="subject" id="subject" placeholder="{{page.subject_placeholder}}" required />
 
 			<label for="message">{{page.msg}}</label>
 			<textarea name="message" id="message" placeholder="{{page.msg_placeholder}}"></textarea>

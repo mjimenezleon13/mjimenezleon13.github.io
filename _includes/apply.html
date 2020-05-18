@@ -1,0 +1,45 @@
+<section class="hero sm-shrink" style="padding-top: 200px;">
+	<div class="container">
+		<h3 class="sm-large" style="font-weight: 300; text-align: center;">{{page.title | upcase }}</h3>
+	</div>
+</section>
+<section class="diagonal-top">
+	<div class="container" style='margin-top: -80px;'>
+    <h2>Thanks for applying!</h2>
+    <p>Please Fill out this form and soon we will contact you</p>
+    <form action="http://formspree.io/{{site.data.company.apply_form_email}}" method="post" class="contact-form">
+      <input type="text" name="_gotcha" style="display: none;" />
+
+      <div class="halves">
+        <div>
+          <label for="name">{{page.f_name}}</label>
+          <input type="text" name="first-name" id="first-name" placeholder="{{page.f_name_placeholder}}" />
+        </div>
+
+        <div>
+          <label for="name">{{page.l_name}}</label>
+          <input type="text" name="last-name" id="last-name" placeholder="{{page.l_name_placeholder}}" />
+        </div>
+      </div>
+
+      <label for="email">{{page.input_email}}</label>
+      <input type="email" name="sender_email" id="email" placeholder="{{page.email_placeholder}}" required />
+
+      <label for="phone">{{page.input_phone}}</label>
+      <input type="tel" name="phone" id="phone" placeholder="{{page.phone_placeholder}}" required />
+
+      <label for="occupation">{{page.input_occupation}}</label>
+      <input type="text" name="occupation" id="occupation" placeholder="{{page.occupation_placeholder}}" required />
+
+      <label for="interested">{{page.interested}}</label>
+      <br>
+      <input type="radio" name="interested" id="interested_yes" value='yes' required />
+      <label for="interested_yes">{{page.interested_yes}}</label>
+      <br>
+      <input type="radio" name="interested" id="interested_no" value='no' required />
+      <label for="interested_no">{{page.interested_no}}</label>
+
+      <input type="submit" value="{{page.submit_txt}}" />
+    </form>
+  </div>
+</section>

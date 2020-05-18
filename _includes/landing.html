@@ -6,7 +6,7 @@
 				<p>- {{  page.hero_list_minus }}</p>
 				<p><strong>+ {{  page.hero_list_plus }}</strong></p>
 			</div>
-			<p><a class="button alt" href="{{ site.baseurl }}/contact/">{{page.apply_btn}}</a></p>
+			<p><a class="button alt" href="{{ site.baseurl }}/apply">{{page.apply_btn}}</a></p>
 		</div>
 		<div>
 			<img src="{{ site.baseurl }}/images/suira-landing-illustration.svg">
@@ -44,14 +44,15 @@
 	<div class="container">
 		<div class="centered-text">
 			<h2 class="brand-color light-text editable">{{ page.profiles_html }}</h2>
-			<p class="small">Lorem ipsum</p>
+			<p class="small">{{page.profiles_subtitle}}</p>
 			<div class="variable-columns bootstrap-wrapper" style="margin-top: 100px;">
 				<div class="row">
-					{% for profile in site.profiles %}
+					{% for prof_name in page.profiles %}
 					{% assign idx = forloop.index | minus: 1 | modulo: 3 %}
 					<div class="col-sm-4" style="margin-bottom: 15px;">
 						<div class="container">
-							{% include c-profile-vertical.html profile=profile %}
+							{{name}}
+							{% include profile-card-v.html profile_name=name%}
 						</div>
 					</div>
 					{% endfor %}

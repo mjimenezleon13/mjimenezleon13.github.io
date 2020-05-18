@@ -10,13 +10,13 @@ description: Jekyll template with example content for a web agency.
 
 # Author details for the jekyll-seo-tag gem
 author:
-  name:
-  email:
+  name: Alejandro Aristizabal
+  email: alejandro.aristizabal24@gmail.com
   twitter: # twitter username without the @ symbol
 
 # Social details for the jekyll-seo-tag gem
 social:
-  name: Urban Template
+  name: Suira
   links:
     - https://github.com/CloudCannon/urban-jekyll-template
 

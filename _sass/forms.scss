@@ -9,6 +9,12 @@ input[type=submit] {
 	cursor: pointer;
 }
 
+input[type=radio] {
+	width: unset;
+	display: inline-block;
+	text-align: left;
+}
+
 input[type=submit]:hover {
 	border: 1px solid $secondary-brand-color;
 	background: $secondary-brand-color;
@@ -46,6 +52,8 @@ textarea {
 label {
 	margin: 15px 0 10px 0;
 	font-size: 1.2em;
+	display:inline-block;
+	width: unset;
 }
 
 input,

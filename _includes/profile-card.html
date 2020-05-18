@@ -1,11 +1,11 @@
 {% assign profile = includes.profile %}
 {% assign prof_name = includes.profile_name %}
 {% if prof_name %}
-{% assign profile = site.profiles
-  | where_exp: "profile", "profile.path contains prof_name" | first %}
-  {% endif %}
+  {% assign profile = site.profiles
+  | where_exp: "profile", "profile.path contains prof_name" | where_exp: "profile", "profile.lang == page.lang" | first %}
+{% endif %}
   <div class="container profile-card">
-    <a href="{{site.baseurl}}{{profile.url}}">
+    <a href="{{site.baseurl}}{{profile.url}}" {% unless profile.url %}class='disabled'{% endunless %}>
       <div class="offset">
         <div class="square-div small-centered">
           <div class="circular-image">

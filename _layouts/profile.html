@@ -188,8 +188,8 @@ layout: default
 						<li><h5>{{t.c_address_label}}:</h5> <p>{{page.contact_address}}</p></li>
 						{% endif %}
 					</ul>
-					<form action="http://formspree.io/alejandro.aristizabal24@gmail.com" method="post" class="contact-form">
-						<input type="hidden" name="_replyto" value="{{page.contact_email}}" />
+					<form action="http://formspree.io/{{site.data.company.profile_form_email}}" method="post" class="contact-form">
+						<input type="hidden" name="receiver" value="{{page.contact_email}}" />
 						<input type="text" name="_gotcha" style="display: none;" />
 
 						<div class="halves">
@@ -204,8 +204,8 @@ layout: default
 							</div>
 						</div>
 
-						<label for="email">{{t.input_email}}</label>
-						<input type="email" name="email" id="email" placeholder="{{t.email_placeholder}}" required />
+						<label for="sender_email">{{t.input_email}}</label>
+						<input type="email" name="sender_email" id="email" placeholder="{{t.email_placeholder}}" required />
 
 						<label for="message">{{t.msg}}</label>
 						<textarea name="message" id="message" placeholder="{{t.msg_placeholder}}"></textarea>

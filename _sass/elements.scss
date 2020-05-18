@@ -17,6 +17,12 @@ a {
 	text-decoration: none;
 }
 
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	color: black;
+}
+
 a:hover {
 	text-decoration: underline;
 }
