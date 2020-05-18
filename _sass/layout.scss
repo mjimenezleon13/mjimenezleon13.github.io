@@ -782,3 +782,14 @@ h3.sm-large {
 		margin-top: -1px;
 	}
 }
+
+#contact .contact-info {
+	h5 {
+		display: inline-block;
+		margin: 0;
+	}
+	p, a {
+		display:inline-block;
+		font-size: 1em;
+	}
+}

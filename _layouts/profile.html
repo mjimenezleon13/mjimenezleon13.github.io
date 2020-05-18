@@ -177,8 +177,19 @@ layout: default
 			<!-- CONTACT -->
 			<div class="container horizontal-divider" id="contact">
 				<h2>{{t.contact_title}}</h2>
-					<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-						<input type="hidden" name="_to" value="support@example.com" />
+					<ul class='contact-info'>
+						{% if page.contact_phone %}
+						<li><h5>{{t.c_phone_label}}:</h5> <a href="tel:{{page.contact_phone}}">{{page.contact_phone}}</a></li>
+						{% endif %}
+						{% if page.contact_email %}
+						<li><h5>{{t.c_email_label}}:</h5> <a href="mailto:{{page.contact_email}}">{{page.contact_email}}</a></li>
+						{% endif %}
+						{% if page.contact_address %}
+						<li><h5>{{t.c_address_label}}:</h5> <p>{{page.contact_address}}</p></li>
+						{% endif %}
+					</ul>
+					<form action="http://formspree.io/alejandro.aristizabal24@gmail.com" method="post" class="contact-form">
+						<input type="hidden" name="_replyto" value="{{page.contact_email}}" />
 						<input type="text" name="_gotcha" style="display: none;" />
 
 						<div class="halves">

@@ -10,6 +10,9 @@ t:
     trayectory_title: Trayectory
     projects_title: Projects
     contact_title: Contact
+    c_phone_label: Phone
+    c_email_label: Email
+    c_address_label: Address
     f_name: First Name
     f_name_placeholder: John
     l_name: Last Name
@@ -32,6 +35,9 @@ t:
     trayectory_title: Trayectoria
     projects_title: Proyectos
     contact_title: Contacto
+    c_phone_label: Teléfono
+    c_email_label: Correo
+    c_address_label: Dirección
     f_name: Nombre(s)
     f_name_placeholder: John
     l_name: Apellido
