@@ -1,10 +1,14 @@
 links:
   en:
+    - name: Suira
+      link: /
     - name: Profiles
       link: /profiles/
     - name: Contact
       link: /contact/
   es:
+    - name: Suira
+      link: /
     - name: Perfiles
       link: /es/profiles
     - name: Contacto
