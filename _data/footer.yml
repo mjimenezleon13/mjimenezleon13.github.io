@@ -1,5 +1,7 @@
 navlinks:
   es:
+    - name: Contactar
+      link: /es/contact
     - name: Suira
       link: /es/
     - name: T&C
@@ -7,6 +9,8 @@ navlinks:
     - name: FAQ
       link: /es/FAQ
   en:
+    - name: Contact
+      link: /contact
     - name: Suira
       link: /
     - name: ToS
@@ -14,23 +18,11 @@ navlinks:
     - name: FAQ
       link: /FAQ
 socialinks:
-  - name: Facebook
-    link: https://facebook.com/cloudcannon/
-    social_icon: Facebook
-    new_window: true
-  - name: Twitter
-    link: https://twitter.com/cloudcannon/
-    social_icon: Twitter
-    new_window: true
   - name: Instagram
-    link: https://instagram.com/
+    link: https://www.instagram.com/suira.co/
     social_icon: Instagram
     new_window: true
   - name: LinkedIn
-    link: https://nz.linkedin.com/company/cloud-cannon
+    link: https://www.linkedin.com/company/suira/
     social_icon: LinkedIn
-    new_window: true
-  - name: Youtube
-    link: https://youtube.com/
-    social_icon: Youtube
     new_window: true
