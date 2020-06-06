@@ -51,7 +51,6 @@ textarea {
 
 label {
 	margin: 15px 0 10px 0;
-	font-size: 1.2em;
 	display:inline-block;
 	width: unset;
 }
@@ -59,16 +58,12 @@ label {
 input,
 textarea {
 	padding: 5px;
-	font-size: 1.2em;
 	border-radius: 3px;
 }
 
 @media (max-width: 575px) {
 	label,
 	input,
-	textarea {
-		font-size: 0.7rem;
-	}
 
 	label {
 		margin: 8px 0 4px 0;

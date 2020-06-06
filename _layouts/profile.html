@@ -4,7 +4,7 @@ layout: default
 {% assign t = site.data.profile.t[page.lang] %}
 <section class="hero" style="padding-top: 200px;">
 	<div class="container">
-		<h3 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}{{t.prof_back.url}}">&larr;{{t.prof_back.text}}</a></h3>
+		<h4 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}{{t.prof_back.url}}">&larr;{{t.prof_back.text}}</a></h4>
 	</div>
 </section>
 
@@ -23,7 +23,7 @@ layout: default
 					</div>
 				</div>
 				<div class="col-9 col-sm-6 col-md-6 col-lg-8">
-					<h3 style="font-weight: 300; margin: 1vw 0 0 0;">{{page.name}}</h3>
+					<h2 style="font-weight: 300; margin: 1vw 0 0 0;">{{page.name}}</h2>
 					<ul class="specialties-list">
 						{% for specialty in page.specialties %}
 						<li>{{specialty | strip}}</li>
@@ -58,7 +58,7 @@ layout: default
 			<!-- FEATURED ITEMS -->
 			{% if page.featured %}
 			<div class="bootstrap-wrapper container horizontal-divider">
-				<h2 id="featured">{{t.featured_title}}</h2>
+				<h4 id="featured">{{t.featured_title}}</h4>
 				{% for media in page.featured %}
 				{% assign mod_idx = forloop.index | minus: 1 | modulo: 2%}
 				{% if mod_idx == 0 %}
@@ -78,7 +78,7 @@ layout: default
 			<!-- SERVICES -->
 			{% if page.services %}
 			<div class="container horizontal-divider" id="services">
-				<h2>{{t.services_title}}</h2>
+				<h4>{{t.services_title}}</h4>
 				<ul>
 					{% for service in page.services %}
 					<li>{{service | strip}}</li>
@@ -91,7 +91,7 @@ layout: default
 			<!-- REFERENCES -->
 			{% if page.references %}
 			<div class="container horizontal-divider" id="references">
-				<h2>{{t.references_title}}</h2>
+				<h4>{{t.references_title}}</h4>
 				{% for reference in page.references %}
 				<div class="ref-item bootstrap-wrapper">
 					<div class="row ref-header">
@@ -113,7 +113,7 @@ layout: default
 								{% if reference.link %}
 								<a href="{{reference.link}}" target="_blank">
 									{% endif %}
-									<h3 style="font-weight: 300; margin: 0;">{{reference.name}}</h3>
+									<h4 style="font-weight: 300; margin: 0;">{{reference.name}}</h4>
 									{% if reference.link %}
 								</a>
 								{% endif %}
@@ -153,7 +153,7 @@ layout: default
 			<!-- TRAYECTORY -->
 			{% if page.trayectory %}
 			<div class="container horizontal-divider" id="services">
-				<h2>{{t.trayectory_title}}</h2>
+				<h4>{{t.trayectory_title}}</h4>
 				<ul>
 					{% for trayectory in page.trayectory %}
 					<li>{{trayectory | strip}}</li>
@@ -166,7 +166,7 @@ layout: default
 			<!-- PROJECTS -->
 			{% if page.projects %}
 			<div class="container horizontal-divider" id="projects">
-				<h2>{{t.projects_title}}</h2>
+				<h4>{{t.projects_title}}</h4>
 				<div class="row" style="margin: 0;">
 					{% include column-grid.html  identifier="projects" lg-columns=3 sm-columns=2 xs-columns=1 items=page.projects %}
 				</div>
@@ -176,7 +176,7 @@ layout: default
 
 			<!-- CONTACT -->
 			<div class="container horizontal-divider" id="contact">
-				<h2>{{t.contact_title}}</h2>
+				<h4>{{t.contact_title}}</h4>
 					<ul class='contact-info'>
 						{% if page.contact_phone %}
 						<li><h5>{{t.c_phone_label}}:</h5> <a href="tel:{{page.contact_phone}}">{{page.contact_phone}}</a></li>
@@ -212,6 +212,7 @@ layout: default
 
 						<input type="submit" value="{{t.submit_txt}}" />
 					</form>
+					<br>
 			</div>
 			<!-- /CONTACT -->
 

@@ -23,12 +23,12 @@
         <div class="space-between">
           <div class="social-links">
             {% if profile.social-links %}
-            <p>Links: {{profile.social-links | size}}</p>
+            <h3>Links: {{profile.social-links | size}}</h3>
             {% endif %}
           </div>
           <div class="location">
             {% if profile.location %}
-            <p><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</p>
+            <h3><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</h3>
             {% endif %}
           </div>
         </div>

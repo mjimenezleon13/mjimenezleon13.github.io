@@ -2,22 +2,6 @@ html, body {
 	height: 100%;
 }
 
-h2 {
-    font-size: 0.8rem;
-}
-
-h3 {
-    font-size: 0.6rem;
-}
-
-h4 {
-    font-size: 0.4rem;
-}
-
-p {
-    font-size: 0.5rem;
-}
-
 .flex-container {
 	height: 100%;
 	display: -webkit-flex;
@@ -49,13 +33,7 @@ p {
 .light-text {
 	font-weight: 300;
 }
-.small {
-	font-size: 1rem;
-	p {
-		font-size: 1rem;
-		margin: unset;
-	}
-}
+
 .container,
 .text-container {
 	margin: 0 auto;
@@ -93,10 +71,6 @@ header {
 		&:hover {
 			text-decoration: none;
 		}
-	}
-
-	.company-name {
-		font-size: 1.5rem;
 	}
 }
 
@@ -185,19 +159,12 @@ section {
 			max-width: 90%;
 		}
 
-		h2 {
-			font-size: 2.3rem;
-		}
-
 		p {
-			font-size: 1.6rem;
 			color: #fff;
 		}
 
 		.small {
-			font-size: 1rem;
 			p {
-				font-size: inherit;
 				margin: unset;
 			}
 		}
@@ -229,7 +196,7 @@ section {
 		}
 
 	&.secondary {
-		padding: 2px 8px;
+		padding: 10px 8px;
 		background-color: $secondary-brand-color;
 		border-radius: 4px;
 		color: white;
@@ -340,7 +307,6 @@ section {
 	}
 
 	.name {
-		font-size: 1.1rem;
 		color: $brand-color;
 	}
 
@@ -465,7 +431,6 @@ section {
 .card {
 	text-align: center;
 	h3 {
-		font-size: 1.2rem;
 	}
 }
 
@@ -520,7 +485,6 @@ ul.icon-list {
 
 	i {
 		color: $brand-color;
-		font-size: .8rem;
 		background-color: $brand-color-light;
 		padding: 8px 0px;
 		width: 30px;
@@ -541,21 +505,16 @@ ul.icon-list {
 
 ul.specialties-list {
 	list-style-type: none;
-	margin: 5px 0 10px 0;
-	padding: 0;
-	font-size: .4rem;
-	@media (min-width: 576px) {
-		margin: 5px 0 10px 0;
-		font-size: .65rem;
-		font-weight: 400;
-	}
+	margin: 5px 2px 10px 2px;
+	padding: 3px 3px;
+	font-size: 1rem;
 	li {
 		display: inline-block;
 		background-color: darken($html-background-color, 30%);
 		color: white;
-		padding: 0 2px;
+		padding: 0px 5px;
 		border-radius: 8px;
-		margin-bottom: 1px;
+		margin-bottom: 3px;
 		@media (min-width: 576px) {
 			padding: 0 8px;
 			margin-bottom: 5px;
@@ -688,12 +647,6 @@ ul.star-rating {
 	}
 }
 
-h3.sm-large {
-	@media (max-width: 575px) {
-		font-size: 1.3rem;
-	}
-}
-
 .prof-header {
 	.offset {
 		margin-top: -2vw;
@@ -701,6 +654,7 @@ h3.sm-large {
 }
 
 .profile-grid {
+	background-color: red;
 	margin-top: -80px;
 	@media (min-width: 575px) {
 		display: grid;
@@ -708,7 +662,7 @@ h3.sm-large {
 		grid-gap: 2rem 4%;
 		.profile-card {
 			background: white;
-			border-radius: 10px;
+			border-radius: 10%;
 			box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 			padding: 0px 40px;
 		}
@@ -778,9 +732,6 @@ h3.sm-large {
 	justify-content: space-between;
 	width: 100%;
 	p {
-		@media (min-width:768px) {
-			font-size: .8rem;
-		}
 		margin-bottom: 1px !important;
 	}
 }
@@ -806,6 +757,5 @@ h3.sm-large {
 	}
 	p, a {
 		display:inline-block;
-		font-size: 1rem;
 	}
 }

@@ -24,10 +24,8 @@ article.column-grid-content {
 
 .column-grid-modal .modal-content h2 {
   margin-bottom: 15px;
-  font-size: 2em;
 
   @media (max-width: 575px) {
-    font-size:1.5rem;
     margin: 0;
   }
 }
@@ -38,7 +36,6 @@ article.column-grid-content {
 
 .column-grid-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
-  font-size: 12px;
   font-style: italic;
 }
 
@@ -90,7 +87,6 @@ article.column-grid-content {
 .column-grid-modal .modal-body .content button {
   text-align: center;
   text-decoration:underline;
-  font-size: 1.3rem;
   font-weight: 300;
   color: rgba(0,0,0,0.8);
   background: transparent;

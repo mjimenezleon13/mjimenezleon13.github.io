@@ -26,7 +26,7 @@
             {% include carousel.html gallery=item.gallery galleryid=galleryid %}
             {% if item.profiles or item.custom_participants%}
               <div class="horizontal-divider">
-                <h3>Participants</h3>
+                <h2>Participants</h2>
             		<div class="profile-list">
             			{% for prof_name in item.profiles %}
             				{% include profile-card.html %}

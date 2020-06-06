@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="hero sm-shrink" style="padding-top: 200px;">
 	<div class="container">
-		<h3 class="sm-large" style="font-weight: 300; text-align: center;">{{page.title | upcase }}</h3>
+		<h2 class="sm-large" style="font-weight: 300; text-align: center;">{{page.title | upcase }}</h2>
 	</div>
 </section>
 <section class="diagonal-top" style="padding: 0;">
@@ -39,11 +39,11 @@ layout: default
 <section class="">
 	<div class="container halves aligned-top">
 		<div>
-			<h3>{{page.phone}}</h3>
+			<h2>{{page.phone}}</h2>
 				<phone><a target="_blank" href="tel:{{site.data.company.contact_phone_number}}">{{ site.data.company.contact_phone_number }}</a></phone>
 		</div>
 		<div>
-			<h3>{{page.email}}</h3>
+			<h2>{{page.email}}</h2>
 			<p><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></p>
 		</div>
 	</div>

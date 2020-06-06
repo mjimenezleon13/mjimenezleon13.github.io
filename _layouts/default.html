@@ -103,14 +103,6 @@
 								{% endif %}
 								<li><a href="{{ site.baseurl }}{{ link.link }}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a></li>
 							{% endfor %}
-							{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-							{% for page in pages %}
-								<li><a href="{{ site.baseurl }}{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a></li>
-							{% endfor %}
-							{% assign pages=site.profiles | where:"ref", page.ref | sort: 'lang' %}
-							{% for page in pages %}
-								<li><a href="{{ site.baseurl }}{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a></li>
-							{% endfor %}
 						</ul>
 					</nav>
 				</div>
