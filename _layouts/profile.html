@@ -87,6 +87,17 @@ layout: default
 			{% endif %}
 			<!-- /SERVICES -->
 
+			<!-- PROJECTS -->
+			{% if page.projects %}
+			<div class="container horizontal-divider" id="projects">
+				<h4>{{t.projects_title}}</h4>
+				<div class="row" style="margin: 0;">
+					{% include column-grid.html  identifier="projects" lg-columns=3 sm-columns=2 xs-columns=1 items=page.projects %}
+				</div>
+			</div>
+			{% endif %}
+			<!-- /PROJECTS -->
+
 			<!-- REFERENCES -->
 			{% if page.references %}
 			<div class="container horizontal-divider" id="references">
@@ -162,17 +173,6 @@ layout: default
 			{% endif %}
 			<!-- /TRAYECTORY -->
 
-			<!-- PROJECTS -->
-			{% if page.projects %}
-			<div class="container horizontal-divider" id="projects">
-				<h4>{{t.projects_title}}</h4>
-				<div class="row" style="margin: 0;">
-					{% include column-grid.html  identifier="projects" lg-columns=3 sm-columns=2 xs-columns=1 items=page.projects %}
-				</div>
-			</div>
-			{% endif %}
-			<!-- /PROJECTS -->
-
 			<!-- CONTACT -->
 			<div class="container horizontal-divider" id="contact">
 				<h4>{{t.contact_title}}</h4>
@@ -189,8 +189,8 @@ layout: default
 					</ul>
 					<br>
 				<h4>{{t.send_message}}</h4>
-					<form action="http://formspree.io/{{site.data.company.profile_form_email}}" method="post" class="contact-form">
-						<input type="hidden" name="receiver" value="{{page.contact_email}}" />
+					<form action="http://formspree.io/{{site.data.company.profile_form_email}}" method="post" class="contact-form" target="_blank">
+						<input type="hidden" name="receiver_suira_profile" value="{{page.name}}" />
 						<input type="text" name="_gotcha" style="display: none;" />
 
 						<div class="halves">

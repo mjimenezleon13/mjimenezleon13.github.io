@@ -1,4 +1,4 @@
-title: Urban Template
+title: Suira
 url: "https://teal-worm.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -10,8 +10,8 @@ description: Jekyll template with example content for a web agency.
 
 # Author details for the jekyll-seo-tag gem
 author:
-  name: Alejandro Aristizabal
-  email: alejandro.aristizabal24@gmail.com
+  name: Alejandro Aristizabal & Mateo Jiménez León
+  email: alejandro.aristizabal24@gmail.com | mateo.jimenez.leon@gmail.com
   twitter: # twitter username without the @ symbol
 
 # Social details for the jekyll-seo-tag gem
