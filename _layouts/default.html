@@ -101,7 +101,7 @@
 								{% if link.link == page.url %}
 									{% assign class = class | append: " active" %}
 								{% endif %}
-								<li><a href="{{ site.baseurl }}{{ link.link }}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a></li>
+								<li><a href="{{ site.baseurl }}{{ link.link }}" class=" constant-nav {{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a></li>
 							{% endfor %}
 						</ul>
 					</nav>

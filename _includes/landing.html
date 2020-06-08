@@ -30,7 +30,7 @@
 				</ul>
 				<br>
 			</div>
-			<h2 class="brand-color light-text editable"> {{page.tell_us_more}} <a style="text-decoration: underline;" href="www.google.com" target="_blank">{{page.tell_us_more_link}}</a></h2>
+			<h2 class="brand-color light-text editable"> {{page.tell_us_more}} <a style="text-decoration: underline;" href="{{page.tell_us_more_link_url}}" target="_blank">{{page.tell_us_more_link_text}}</a></h2>
 		</div>
 		<div>
 			<img src="{{ site.baseurl }}/images/suira-illustration-2.svg" />
@@ -49,20 +49,14 @@
 		<div class="centered-text">
 			<h2 class="brand-color light-text editable">{{ page.profiles_html }}</h2>
 			<p class="small">{{page.profiles_subtitle}}</p>
-			<div class="variable-columns bootstrap-wrapper" style="margin-top: 100px;">
-				<div class="row profile-grid">
+				<div style="margin-top: 50px;" class="profile-grid">
 					{% for prof_name in page.profiles %}
-					{% assign idx = forloop.index | minus: 1 | modulo: 3 %}
-					<div class="col-sm-4" style="margin-bottom: 15px;">
-						<div class="container">
-							{{name}}
-							{% include profile-card-v.html profile_name=name%}
-						</div>
-					</div>
+						{% include profile-card.html profile_name=name %}
 					{% endfor %}
 				</div>
-			</div>
-			<h4><a class="button secondary alt" href="{{ site.baseurl }}{{page.profiles_link}}">{{page.profiles_link_text}}</a></h4>
+				<br>
+			<h4><a class="button secondary " href="{{ site.baseurl }}{{page.profiles_link}}">{{page.profiles_link_text}}</a></h4>
+			<h4><a class="button secondary " href="{{ site.baseurl }}/apply">{{page.apply_second_btn}}</a></h4>
 		</div>
 	</div>
 </section>

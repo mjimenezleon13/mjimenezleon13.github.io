@@ -11,22 +11,21 @@
         <div class="col-sm-2">
         </div>
         <div class="col-sm-8">
-          <h2>{{ item.title }}</h2>
-        </div>
-        <div class="col-sm-2">
-          <button type="button" data-dismiss="modal">&larr;Back to profile</button>
+            <h2 style="cursor: pointer" data-dismiss="modal">{{ page.name }}</h2>
         </div>
       </div>
     </section>
     <section class="modal-body diagonal-top">
       <div class="container">
         <hr class="star-primary">
+        <h2>{{ item.title }}</h2>
+        <br>
         <div class="row">
           <div class="col-lg-7">
             {% include carousel.html gallery=item.gallery galleryid=galleryid %}
             {% if item.profiles or item.custom_participants%}
               <div class="horizontal-divider">
-                <h2>Participants</h2>
+                <h4>{{t.project_participants}}</h4>
             		<div class="profile-list">
             			{% for prof_name in item.profiles %}
             				{% include profile-card.html %}
@@ -39,8 +38,9 @@
             {% endif %}
           </div>
           <div class="col-lg-5 content">
+            <h4>{{ t.project_description }}</h4>
             {{ item.description | newline_to_br | markdownify}}
-            <button type="button" data-dismiss="modal">&larr;Back to profile</button>
+            <button class="button secondary" type="button" data-dismiss="modal"> {{t.project_back_button}} </button>
           </div>
         </div>
       </div>

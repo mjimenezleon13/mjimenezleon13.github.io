@@ -4,12 +4,16 @@ links:
       link: /
     - name: Profiles
       link: /profiles/
+    - name: Services
+      link: /services/
     - name: Contact
       link: /contact/
   es:
     - name: Suira
       link: /
     - name: Perfiles
-      link: /es/profiles
+      link: /es/profiles/
+    - name: Servicios
+      link: /es/services
     - name: Contacto
-      link: /es/contact
+      link: /es/contact/

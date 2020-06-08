@@ -1,18 +1,18 @@
 navlinks:
   es:
-    - name: Contactar
-      link: /es/contact
     - name: Suira
       link: /es/
+    - name: Contactar
+      link: /es/contact
     - name: T&C
       link: /es/ToS
     - name: FAQ
       link: /es/FAQ
   en:
-    - name: Contact
-      link: /contact
     - name: Suira
       link: /
+    - name: Contact
+      link: /contact
     - name: ToS
       link: /ToS
     - name: FAQ

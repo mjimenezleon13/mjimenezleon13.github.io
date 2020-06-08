@@ -21,17 +21,17 @@
           {% endfor %}
         </ul>
         <div class="space-between">
-          <div class="social-links">
-            {% if profile.social-links %}
-            <h3>Links: {{profile.social-links | size}}</h3>
-            {% endif %}
-          </div>
           <div class="location">
             {% if profile.location %}
             <h3><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>{{profile.location}}</h3>
             {% endif %}
           </div>
-        </div>
+          <div class="social-links">
+            {% if profile.social-links %}
+            <h3>Links: {{profile.social-links | size}}</h3>
+            {% endif %}
+          </div>
       </div>
+    </div>
     </a>
   </div>

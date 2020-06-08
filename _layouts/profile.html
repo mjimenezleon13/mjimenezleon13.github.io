@@ -2,9 +2,8 @@
 layout: default
 ---
 {% assign t = site.data.profile.t[page.lang] %}
-<section class="hero" style="padding-top: 200px;">
+<section class="hero" style="padding: 200px 0px 200px 0px;">
 	<div class="container">
-		<h4 style="font-weight: 300; text-align: right;"><a href="{{ site.baseurl }}{{t.prof_back.url}}">&larr;{{t.prof_back.text}}</a></h4>
 	</div>
 </section>
 
@@ -97,7 +96,7 @@ layout: default
 					<div class="row ref-header">
 						<div class="col-3 col-md-2 ref-profile" style="max-height: 16vw;padding-left:5px;">
 							<div class="square-div">
-								<div class="circular-image small centered break-sm">
+								<div class="circular-image small centered break-sm" style="max-width: 70%; max-height: 70%">
 									{% if reference.link %}
 									<a href="{{reference.link}}" target="_blank">
 										{% endif %}
@@ -188,6 +187,8 @@ layout: default
 						<li><h5>{{t.c_address_label}}:</h5> <p>{{page.contact_address}}</p></li>
 						{% endif %}
 					</ul>
+					<br>
+				<h4>{{t.send_message}}</h4>
 					<form action="http://formspree.io/{{site.data.company.profile_form_email}}" method="post" class="contact-form">
 						<input type="hidden" name="receiver" value="{{page.contact_email}}" />
 						<input type="text" name="_gotcha" style="display: none;" />

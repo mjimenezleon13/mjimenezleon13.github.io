@@ -10,6 +10,7 @@ t:
     trayectory_title: Trayectory
     projects_title: Projects
     contact_title: Contact
+    send_message: Send a Message
     c_phone_label: Phone
     c_email_label: Email
     c_address_label: Address
@@ -24,6 +25,9 @@ t:
     msg: Message
     msg_placeholder: Hi there...
     submit_txt: Send Message
+    project_description: Description
+    project_participants: Participants
+    project_back_button: Back to Profile
   es:
     prof_back:
       text: Volver a perfiles
@@ -35,6 +39,7 @@ t:
     trayectory_title: Trayectoria
     projects_title: Proyectos
     contact_title: Contacto
+    send_message: Envía un mensaje
     c_phone_label: Teléfono
     c_email_label: Correo
     c_address_label: Dirección
@@ -49,3 +54,6 @@ t:
     msg: Mensaje
     msg_placeholder: Hola...
     submit_txt: Enviar Mensaje
+    project_description: Descripción
+    project_participants: Participantes
+    project_back_button: Volver al Perfil
