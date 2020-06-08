@@ -6,10 +6,20 @@
 </section>
 <section class="diagonal-top">
 	<div class="container grid">
+		<h2>{{page.heading}}</h2>
+		<p>{{page.subtitle}}</p>
+		<div class="centered-text">
+			<h4><a class="button secondary " href="{{ site.baseurl }}/apply">{{page.apply_second_btn}}</a></h4>
+		</div>
+		<br>
 		<div class="profile-grid">
 			{% for profile in profiles %}
 				{% include profile-card.html profile=profile %}
 			{% endfor %}
+		</div>
+		<br>
+		<div class="centered-text">
+			<h4><a class="button secondary " href="{{ site.baseurl }}/apply">{{page.apply_second_btn}}</a></h4>
 		</div>
 	</div>
 </section>
