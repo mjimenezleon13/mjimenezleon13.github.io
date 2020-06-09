@@ -9,7 +9,11 @@ ref: /FAQ
 
 We’re like you. We’re a team of dreamers, creatives and freelancers that believe the world would be a better place if people would follow their passion. So we’re in a quest to provide the tools to make their path a better one.
 
-What is Suira?We’re a management platform to help Creatives and Freelancers improve their business. The way we do this is by taking care of the administrative tasks so that you can focus on your creativity.&nbsp;
+&nbsp;
+
+**What is Suira?**
+
+We’re a management platform to help Creatives and Freelancers improve their business. The way we do this is by taking care of the administrative tasks so that you can focus on your creativity.&nbsp;
 
 &nbsp;
 
